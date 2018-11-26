@@ -100,19 +100,19 @@ inputTextB = pygwidgets.InputText(window, (20, 200), initialFocus=True,\
 
 
 box1rect = pygame.Rect(10,10,250,100) #button placement
-box_1 = pygame.draw.rect(window, YELLOW, box1rect) # these are the boxes i have placed
-box_2 = pygame.draw.rect(window, YELLOW, [280,10,250,100])
-box_3 = pygame.draw.rect(window, YELLOW, [550,10,250,100]) 
-box_4 = pygame.draw.rect(window, YELLOW, [10,600,250,100]) 
-box_5 = pygame.draw.rect(window, YELLOW, [280,600,250,100])
-box_6 = pygame.draw.rect(window, YELLOW, [550,600,250,100])
-box_7 = pygame.draw.rect(window, YELLOW, [800,130,400,450]) #place holder for city
-box_1_centerx = box_1.centerx
-box_1_centery = box_1.centery
+##box_1 = pygame.draw.rect(window, YELLOW, box1rect) # these are the boxes i have placed
+##box_2 = pygame.draw.rect(window, YELLOW, [280,10,250,100])
+##box_3 = pygame.draw.rect(window, YELLOW, [550,10,250,100]) 
+##box_4 = pygame.draw.rect(window, YELLOW, [10,600,250,100]) 
+##box_5 = pygame.draw.rect(window, YELLOW, [280,600,250,100])
+##box_6 = pygame.draw.rect(window, YELLOW, [550,600,250,100])
+##box_7 = pygame.draw.rect(window, YELLOW, [800,130,400,450]) #place holder for city
+##box_1_centerx = box_1.centerx
+##box_1_centery = box_1.centery
+##
+##texts('PLACE HOLDER', 30, WHITE, box_1.centerx, box_1.centery)
 
-texts('PLACE HOLDER', 30, WHITE, box_1.centerx, box_1.centery)
-
-restartButton = pygwidgets.CustomButton(window, (box_1.centerx, box_1.centery), \
+restartButton = pygwidgets.CustomButton(window, (1000,50), \
                                     'images/RestartButtonUp.png',
                                     down='images/RestartButtonDown.png',
                                     over='images/RestartButtonOver.png',
@@ -149,8 +149,8 @@ while True:
                 clearbox = boxes(BACKROUND_COLOR,300,300,30,30)
                 print('second box was clicked')
                 box2rect = pygame.Rect(0,0,0,0)
-                    
-            
+                
+                window.blit(backgroundImage, (0, 0))
                 
 
 
@@ -174,7 +174,7 @@ while True:
     restartButton.draw()
     
     pygame.display.update()
-    window.blit(backgroundImage, (0, 0))
+    #window.blit(backgroundImage, (0, 0))
     clock.tick(FRAME_RATE)
     
 
