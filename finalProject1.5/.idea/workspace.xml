@@ -1,0 +1,631 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AnalysisUIOptions">
+    <option name="SCOPE_TYPE" value="3" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="56649495-4cac-44f9-a9fc-23ad1cebe43d" name="Default" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="pygwidgets.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pygwidgets.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-392">
+              <caret line="346" column="12" lean-forward="false" selection-start-line="346" selection-start-column="0" selection-end-line="346" selection-end-column="12" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PygWidgets Test 3.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/PygWidgets Test 3.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="291">
+              <caret line="107" column="0" lean-forward="true" selection-start-line="107" selection-start-column="0" selection-end-line="107" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>self.surf</find>
+      <find>surf</find>
+      <find>captionSurf</find>
+      <find>normal</find>
+      <find>Normal</find>
+      <find>up</find>
+      <find>handleEvent</find>
+      <find>lineSurface</find>
+      <find>soundOnClick</find>
+      <find>tional (keyword) parameters</find>
+      <find>radioDefault</find>
+      <find>RadioButton</find>
+      <find>radioStandard</find>
+      <find>checkbox</find>
+      <find>X</find>
+      <find>type</find>
+      <find>type(</find>
+      <find>Al</find>
+      <find>TextButton</find>
+      <find>setValue</find>
+      <find>calling it</find>
+      <find>startingT</find>
+      <find>currentCardValue</find>
+      <find>sys</find>
+      <find>self.label</find>
+      <find>surface -</find>
+      <find>buttonRec</find>
+      <find>status</find>
+      <find>pygame.font.</find>
+      <find>class Button</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>pygwidgets.</replace>
+      <replace>radioDefault2</replace>
+      <replace>trueOrFalse</replace>
+      <replace>CIRCLE_DIAMETER</replace>
+      <replace>PygWidgets</replace>
+      <replace>statusButton</replace>
+      <replace>CheckBoxA</replace>
+      <replace>InputText</replace>
+      <replace>displayText</replace>
+      <replace>surface</replace>
+      <replace>&quot;&quot;&quot;</replace>
+      <replace>Up</replace>
+      <replace>radioStandard</replace>
+      <replace>tional parameters</replace>
+      <replace>radioDefault</replace>
+      <replace>Button</replace>
+    </replaceStrings>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch.py" />
+        <option value="$PROJECT_DIR$/Temp.py" />
+        <option value="$PROJECT_DIR$/PygWidgets Test.py" />
+        <option value="/Learn OOP wih Python/New OOP Course/Class 1 Before OOP/CardSharks non-OOP/CardSharks n.py" />
+        <option value="$PROJECT_DIR$/Minimal.py" />
+        <option value="$PROJECT_DIR$/Tester.py" />
+        <option value="$PROJECT_DIR$/PygWidgets Test 3.py" />
+        <option value="$PROJECT_DIR$/pygwidgets.py" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="1800" />
+    <option name="y" value="133" />
+    <option name="width" value="1629" />
+    <option name="height" value="947" />
+  </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State>
+            <id />
+          </State>
+          <State>
+            <id>General</id>
+          </State>
+          <State>
+            <id>Python</id>
+          </State>
+          <State>
+            <id>Spelling</id>
+          </State>
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>General</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scratches" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="PygWidgets Dev" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PygWidgets Dev" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="settings.editor.selected.configurable" value="Errors" />
+    <property name="com.intellij.ide.scratch.LRUPopupBuilder$2/Languages" value="Python" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Python.PygWidgets Test 3">
+    <configuration name="CardSharks n" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="/Learn OOP wih Python/New OOP Course/Class 1 Before OOP/CardSharks non-OOP" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="PygWidgets Dev and Text" />
+      <option name="SCRIPT_NAME" value="/Learn OOP wih Python/New OOP Course/Class 1 Before OOP/CardSharks non-OOP/CardSharks n.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+    </configuration>
+    <configuration name="Minimal" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="PygWidgets Dev and Text" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Minimal.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+    </configuration>
+    <configuration name="PygWidgets Test 3" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="PygWidgets Dev and Text" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/PygWidgets Test 3.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+    </configuration>
+    <configuration name="PygWidgets Test" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="PygWidgets Dev and Text" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/PygWidgets Test.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+    </configuration>
+    <configuration name="Tester" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="PygWidgets Dev and Text" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Tester.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+    </configuration>
+    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="PygWidgets Dev and Text" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="Tox" factoryName="Tox">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="PygWidgets Dev and Text" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Doctests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="PygWidgets Dev and Text" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Unittests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="PygWidgets Dev and Text" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;.&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method />
+    </configuration>
+    <list size="5">
+      <item index="0" class="java.lang.String" itemvalue="Python.PygWidgets Test" />
+      <item index="1" class="java.lang.String" itemvalue="Python.CardSharks n" />
+      <item index="2" class="java.lang.String" itemvalue="Python.Tester" />
+      <item index="3" class="java.lang.String" itemvalue="Python.Minimal" />
+      <item index="4" class="java.lang.String" itemvalue="Python.PygWidgets Test 3" />
+    </list>
+    <recent_temporary>
+      <list size="5">
+        <item index="0" class="java.lang.String" itemvalue="Python.PygWidgets Test 3" />
+        <item index="1" class="java.lang.String" itemvalue="Python.Tester" />
+        <item index="2" class="java.lang.String" itemvalue="Python.Minimal" />
+        <item index="3" class="java.lang.String" itemvalue="Python.CardSharks n" />
+        <item index="4" class="java.lang.String" itemvalue="Python.PygWidgets Test" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="56649495-4cac-44f9-a9fc-23ad1cebe43d" name="Default" comment="" />
+      <created>1491682172786</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1491682172786</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="1800" y="133" width="1629" height="947" extended-state="0" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19398405" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25704226" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22316043" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34037557" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection Results" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32996634" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <option name="time" value="19" />
+    </breakpoint-manager>
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/pygwidgets.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15300">
+          <caret line="765" column="38" lean-forward="false" selection-start-line="765" selection-start-column="38" selection-end-line="765" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PygWidgets Test.py" />
+    <entry file="file://$PROJECT_DIR$/pygwidgets.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15300">
+          <caret line="765" column="38" lean-forward="false" selection-start-line="765" selection-start-column="38" selection-end-line="765" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PygWidgets Test.py" />
+    <entry file="file://$PROJECT_DIR$/pygwidgets.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15300">
+          <caret line="765" column="38" lean-forward="false" selection-start-line="765" selection-start-column="38" selection-end-line="765" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PygWidgets Test.py" />
+    <entry file="file://$PROJECT_DIR$/pygwidgets.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15300">
+          <caret line="765" column="38" lean-forward="false" selection-start-line="765" selection-start-column="38" selection-end-line="765" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PygWidgets Test.py" />
+    <entry file="file://$PROJECT_DIR$/pygwidgets.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15300">
+          <caret line="765" column="38" lean-forward="false" selection-start-line="765" selection-start-column="38" selection-end-line="765" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PygWidgets Test.py" />
+    <entry file="file://$PROJECT_DIR$/pygwidgets.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15300">
+          <caret line="765" column="38" lean-forward="true" selection-start-line="765" selection-start-column="38" selection-end-line="765" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PygWidgets Test.py" />
+    <entry file="file://$PROJECT_DIR$/pygwidgets.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15320">
+          <caret line="766" column="46" lean-forward="true" selection-start-line="766" selection-start-column="46" selection-end-line="766" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PygWidgets Test.py" />
+    <entry file="file://$PROJECT_DIR$/pygwidgets.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="14900">
+          <caret line="745" column="0" lean-forward="true" selection-start-line="745" selection-start-column="0" selection-end-line="745" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PygWidgets Test.py" />
+    <entry file="file://$PROJECT_DIR$/pygwidgets.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="20540">
+          <caret line="1027" column="3" lean-forward="true" selection-start-line="1027" selection-start-column="3" selection-end-line="1027" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PygWidgets Test.py" />
+    <entry file="file://$PROJECT_DIR$/pygwidgets.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="20280">
+          <caret line="1014" column="0" lean-forward="false" selection-start-line="1014" selection-start-column="0" selection-end-line="1014" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PygWidgets Test.py" />
+    <entry file="file://$PROJECT_DIR$/pygwidgets.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="20280">
+          <caret line="1014" column="0" lean-forward="true" selection-start-line="1014" selection-start-column="0" selection-end-line="1014" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PygWidgets Test.py" />
+    <entry file="file://$PROJECT_DIR$/pygwidgets.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19780">
+          <caret line="989" column="94" lean-forward="false" selection-start-line="989" selection-start-column="94" selection-end-line="989" selection-end-column="94" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PygWidgets Test.py" />
+    <entry file="file://$PROJECT_DIR$/pygwidgets.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="16340">
+          <caret line="817" column="76" lean-forward="false" selection-start-line="817" selection-start-column="76" selection-end-line="817" selection-end-column="76" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PygWidgets Test.py" />
+    <entry file="file://$PROJECT_DIR$/pygwidgets.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="16340">
+          <caret line="817" column="76" lean-forward="false" selection-start-line="817" selection-start-column="76" selection-end-line="817" selection-end-column="76" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PygWidgets Test.py" />
+    <entry file="file://$PROJECT_DIR$/pygwidgets.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15780">
+          <caret line="789" column="22" lean-forward="false" selection-start-line="789" selection-start-column="22" selection-end-line="789" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PygWidgets Test.py" />
+    <entry file="file://$PROJECT_DIR$/pygwidgets.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19460">
+          <caret line="973" column="0" lean-forward="true" selection-start-line="973" selection-start-column="0" selection-end-line="973" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PygWidgets Test.py" />
+    <entry file="file://$PROJECT_DIR$/pygwidgets.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="21840">
+          <caret line="1092" column="0" lean-forward="true" selection-start-line="1092" selection-start-column="0" selection-end-line="1092" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PygWidgets Test.py" />
+    <entry file="file://$PROJECT_DIR$/pygwidgets.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="21920">
+          <caret line="1096" column="19" lean-forward="true" selection-start-line="1096" selection-start-column="19" selection-end-line="1096" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PygWidgets Test.py" />
+    <entry file="file://$PROJECT_DIR$/pygwidgets.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="21720">
+          <caret line="1086" column="51" lean-forward="false" selection-start-line="1086" selection-start-column="51" selection-end-line="1086" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PygWidgets Test.py" />
+    <entry file="file://$PROJECT_DIR$/pygwidgets.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pygwidgets WORKING.py" />
+    <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="511">
+          <caret line="380" column="0" lean-forward="true" selection-start-line="380" selection-start-column="0" selection-end-line="380" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SliderCode.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/pygame/image.so">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Temp.py" />
+    <entry file="file:///Learn OOP wih Python/New OOP Course/Class 1 Before OOP/CardSharks non-OOP/CardSharks 1.py" />
+    <entry file="file:///Learn OOP wih Python/New OOP Course/Class 1 Before OOP/CardSharks non-OOP/CardSharks n.py" />
+    <entry file="file://$PROJECT_DIR$/PygWidgets Test.py" />
+    <entry file="file://$PROJECT_DIR$/Minimal.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tester.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="182">
+          <caret line="54" column="42" lean-forward="true" selection-start-line="54" selection-start-column="42" selection-end-line="54" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pygwidgets.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-392">
+          <caret line="346" column="12" lean-forward="false" selection-start-line="346" selection-start-column="0" selection-end-line="346" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PygWidgets Test 3.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="291">
+          <caret line="107" column="0" lean-forward="true" selection-start-line="107" selection-start-column="0" selection-end-line="107" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
