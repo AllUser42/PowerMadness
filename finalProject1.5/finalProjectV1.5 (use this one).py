@@ -141,7 +141,7 @@ while True:
             sys.exit()
 
         if event.type == MOUSEBUTTONDOWN:
-            if box1rect.collidepoint(event.pos):# invisible button
+            if box1rect.collidepoint(event.pos):# invisible button 
                 
                 box2 = boxes(WHITE,300,300,30,30)
                 box2rect = pygame.Rect(300,300,30,30)
@@ -152,9 +152,6 @@ while True:
                 
                 window.blit(backgroundImage, (0, 0))
                 
-
-
-
 
 
                 print('clicked in box 1')
