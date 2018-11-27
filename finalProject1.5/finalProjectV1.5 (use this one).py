@@ -29,12 +29,8 @@ WHITE = (255,255,255)
 
 
 #---------end game function----------
-#------------pywigets start------
-
-#-----------pywigets ends------------
-#-----------pygame--------------
-
-#----------end pygame------------
+#-------------load pic---------------
+generator = pygame.image.load("power generator1.jpg")
 
 def buyNewGenerator():
     #TODO
@@ -149,8 +145,8 @@ while True:
                 clearbox = boxes(BACKROUND_COLOR,300,300,30,30)
                 print('second box was clicked')
                 box2rect = pygame.Rect(0,0,0,0)
+                window.blit(generator, (150, 250)) 
                 
-                window.blit(backgroundImage, (0, 0))
                 
 
 
@@ -169,7 +165,7 @@ while True:
 
 
 
-    
+    #window.blit(generator, (150, 250)) 
     counter = counter + 1
     restartButton.draw()
     texts('button', 60, WHITE, 100,10)
