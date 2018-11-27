@@ -73,7 +73,7 @@ def texts(text, size, color, x, y):
     font = pygame.font.Font(fontName,size)
     textSurface = font.render(text, True, color)
     textRect = textSurface.get_rect()
-    textRect.center = (x,y)
+    textRect = (x,y)
     window.blit(textSurface,textRect)
 
 def boxes(color, cords1, cords2, size1, sizes2):
@@ -99,7 +99,7 @@ inputTextB = pygwidgets.InputText(window, (20, 200), initialFocus=True,\
 
 
 
-box1rect = pygame.Rect(10,10,250,100) #button placement
+box1rect = pygame.Rect(100,10,250,100) #button placement
 ##box_1 = pygame.draw.rect(window, YELLOW, box1rect) # these are the boxes i have placed
 ##box_2 = pygame.draw.rect(window, YELLOW, [280,10,250,100])
 ##box_3 = pygame.draw.rect(window, YELLOW, [550,10,250,100]) 
@@ -110,7 +110,7 @@ box1rect = pygame.Rect(10,10,250,100) #button placement
 ##box_1_centerx = box_1.centerx
 ##box_1_centery = box_1.centery
 ##
-##texts('PLACE HOLDER', 30, WHITE, box_1.centerx, box_1.centery)
+#texts('button', 30, WHITE, 100, 100)
 
 restartButton = pygwidgets.CustomButton(window, (1000,50), \
                                     'images/RestartButtonUp.png',
@@ -122,7 +122,7 @@ restartButton = pygwidgets.CustomButton(window, (1000,50), \
                                     callBack=myFunction)
 
 
-backgroundImage= pygame.image.load("images/background.jpg")
+backgroundImage= pygame.image.load("background.jpg")
 window.blit(backgroundImage, (0, 0))
 
 clock = pygame.time.Clock()
@@ -172,11 +172,10 @@ while True:
     
     counter = counter + 1
     restartButton.draw()
-    
+    texts('button', 60, WHITE, 100,10)
     pygame.display.update()
     #window.blit(backgroundImage, (0, 0))
-    clock.tick(FRAME_RATE)
-    
+    clock.tick(FRAME_RATE)    
 
 
 
