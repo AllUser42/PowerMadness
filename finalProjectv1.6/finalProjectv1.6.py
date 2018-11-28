@@ -7,13 +7,6 @@ import pygwidgets
 
 
 #-------------------Pywidgets----------------------------
-class Test():
-    def myMethod(self, theNickname):
-        if theNickname is None:
-            print('In myMethod, a button was clicked')
-        else:
-            print('In myMethod, the button named', theNickname, 'was clicked')
-
 
 
 #-------------------End Pywidgets------------------------
@@ -26,7 +19,7 @@ FRAMES_PER_SECOND = 30
 #-----End Window----
 
 #-----Game Constants-------
-numberOfGenerators = []
+numberOfGenerators = 0
 
 #-----End Game Constants---
 
@@ -46,12 +39,10 @@ WHITE = (255,255,255)
 pygame.init()
 window = pygame.display.set_mode([WINDOW_WIDTH, WINDOW_HEIGHT])
 clock = pygame.time.Clock()
-oTest = Test()
 #-----End Initialize the world----
 
 #--------loading Images-----------
 backGroundImage = pygame.image.load("images/background.jpg")
-window.blit(backGroundImage, (0, 0))
 
 #-------End Loading Images--------
 
@@ -63,11 +54,10 @@ brokenGeneratorCounter = 0
 
 
 #----------pygwidgets-------------
-buyGenerator = pygwidgets.TextButton(window, (300, 430), 'Bought one generator',
-                                     callBack = oTest.myMethod)
+buyGenerator = pygwidgets.TextButton(window, (1000, 50), 'Bought one generator')
 #--------End pygwidgets-----------
 
-
+numberOfGenDisplay = pygwidgets.DisplayText(window,(1000,500),'0',textColor=WHITE,fontSize=50)
 
 
 #-----------Game loop------------------
@@ -76,14 +66,18 @@ while True:
         if event.type == pygame.QUIT:
             pygame.quit()
             sys.exit()
-        else:
-            if buyGenerator.handleEvent(event):
-                print("Button Clicked")
+            
+        if buyGenerator.handleEvent(event):
+            numberOfGenerators = numberOfGenerators + 1
+            print("Gen button clicked # is" ,numberOfGenerators )
+            numberOfGenDisplay.setValue(numberOfGenerators)
+            
             
                 
 
-
+    window.blit(backGroundImage, (0, 0))
     buyGenerator.draw()
+    numberOfGenDisplay.draw()
 
     pygame.display.update()
     clock.tick(FRAMES_PER_SECOND)
