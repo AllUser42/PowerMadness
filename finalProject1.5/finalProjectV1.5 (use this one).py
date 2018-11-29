@@ -152,6 +152,10 @@ while True:
                 print('second box was clicked')
                 box2rect = pygame.Rect(0,0,0,0)
                 window.blit(generator, (150, 250))
+        
+            
+            
+        
             
                 
                 
@@ -161,6 +165,7 @@ while True:
 
         if restartButton.handleEvent(event):  # clicked
             counter = 0
+            
            #print('Content of first input text is:', inputTextA.getValue())
            # print('Content of second input text is:', inputTextB.getValue())
            
