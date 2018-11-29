@@ -54,10 +54,10 @@ brokenGeneratorCounter = 0
 
 
 #----------pygwidgets-------------
-buyGenerator = pygwidgets.TextButton(window, (1000, 50), 'Bought one generator')
+buyGenerator = pygwidgets.TextButton(window, (45, 655), 'Buy a generator')
 #--------End pygwidgets-----------
 
-numberOfGenDisplay = pygwidgets.DisplayText(window,(1000,500),'0',textColor=WHITE,fontSize=50)
+numberOfGenDisplay = pygwidgets.DisplayText(window,(100,45),'0',textColor = WHITE,fontSize = 50)
 
 
 #-----------Game loop------------------
@@ -68,8 +68,8 @@ while True:
             sys.exit()
             
         if buyGenerator.handleEvent(event):
-            numberOfGenerators = numberOfGenerators + 1
             print("Gen button clicked # is" ,numberOfGenerators )
+            numberOfGenerators = numberOfGenerators + 1
             numberOfGenDisplay.setValue(numberOfGenerators)
             
             
