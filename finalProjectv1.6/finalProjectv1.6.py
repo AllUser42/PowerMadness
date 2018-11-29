@@ -19,7 +19,7 @@ FRAMES_PER_SECOND = 30
 #-----End Window----
 
 #-----Game Constants-------
-numberOfGenerators = 0
+numberOfGenerators1 = 0
 
 #-----End Game Constants---
 
@@ -47,17 +47,21 @@ backGroundImage = pygame.image.load("images/background.jpg")
 #-------End Loading Images--------
 
 #----------Counters---------------
-generatorCounter = 0
+generatorCounter1 = 0
 brokenGeneratorCounter = 0
 
 #---------End Counters------------
 
 
 #----------pygwidgets-------------
-buyGenerator = pygwidgets.TextButton(window, (45, 655), 'Buy a generator')
-#--------End pygwidgets-----------
+buyGenerator1 = pygwidgets.TextButton(window, (45, 655), 'Buy a generator 1')
+buyGenerator2 = pygwidgets.TextButton(window, (250, 655), 'Buy a generator 2')
+buyGenerator3 = pygwidgets.TextButton(window, (460, 655), 'Buy a generator 3')
 
-numberOfGenDisplay = pygwidgets.DisplayText(window,(100,45),'0',textColor = WHITE,fontSize = 50)
+
+
+#--------End pygwidgets-----------
+numberOfGen1Display = pygwidgets.DisplayText(window,(100,45),'0',textColor = WHITE,fontSize = 50)
 
 
 #-----------Game loop------------------
@@ -67,17 +71,25 @@ while True:
             pygame.quit()
             sys.exit()
             
-        if buyGenerator.handleEvent(event):
-            print("Gen button clicked # is" ,numberOfGenerators )
-            numberOfGenerators = numberOfGenerators + 1
-            numberOfGenDisplay.setValue(numberOfGenerators)
+        if buyGenerator1.handleEvent(event):
+            print("Gen button clicked # is" , numberOfGenerators1)
+            numberOfGenerators1 = numberOfGenerators1 + 1
+            numberOfGen1Display.setValue(numberOfGenerators1)
+
+        if buyGenerator2.handleEvent(event):
+            print("Gen2 button clicked")
+
+        if buyGenerator3.handleEvent(event):
+            print("Gen3 button clicked")
             
             
                 
 
     window.blit(backGroundImage, (0, 0))
-    buyGenerator.draw()
-    numberOfGenDisplay.draw()
+    buyGenerator1.draw()
+    buyGenerator2.draw()
+    buyGenerator3.draw()
+    numberOfGen1Display.draw()
 
     pygame.display.update()
     clock.tick(FRAMES_PER_SECOND)
