@@ -53,15 +53,20 @@ brokenGeneratorCounter = 0
 #---------End Counters------------
 
 
-#----------pygwidgets-------------
+#----------pygwidgets buttons-------------
 buyGenerator1 = pygwidgets.TextButton(window, (45, 655), 'Buy a generator 1')
 buyGenerator2 = pygwidgets.TextButton(window, (250, 655), 'Buy a generator 2')
 buyGenerator3 = pygwidgets.TextButton(window, (460, 655), 'Buy a generator 3')
 
 
+#--------End pygwidgets buttons-----------
 
-#--------End pygwidgets-----------
-numberOfGen1Display = pygwidgets.DisplayText(window,(100,45),'0',textColor = WHITE,fontSize = 50)
+#----------pywidgets display text----------------
+numberOfGen1Display = pygwidgets.DisplayText(window,(400 , 45),'0',textColor = WHITE,fontSize = 50)
+
+cityPowerDemand = pygwidgets.DisplayText(window,(600 , 45), '1', textColor = WHITE , fontSize = 50)
+
+#----------End pywidgets display text----------------
 
 
 #-----------Game loop------------------
@@ -73,8 +78,12 @@ while True:
             
         if buyGenerator1.handleEvent(event):
             print("Gen button clicked # is" , numberOfGenerators1)
-            numberOfGenerators1 = numberOfGenerators1 + 1
-            numberOfGen1Display.setValue(numberOfGenerators1)
+            if numberOfGenerators1 >= 15:
+                print("Max gen owned")
+            else:
+                numberOfGenerators1 = numberOfGenerators1 + 1
+                numberOfGen1Display.setValue(numberOfGenerators1)
+                
 
         if buyGenerator2.handleEvent(event):
             print("Gen2 button clicked")
@@ -90,6 +99,7 @@ while True:
     buyGenerator2.draw()
     buyGenerator3.draw()
     numberOfGen1Display.draw()
+    cityPowerDemand.draw()
 
     pygame.display.update()
     clock.tick(FRAMES_PER_SECOND)
