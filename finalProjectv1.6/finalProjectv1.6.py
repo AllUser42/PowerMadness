@@ -6,12 +6,6 @@ import sys
 import pygwidgets
 
 
-#-------------------Pywidgets----------------------------
-
-
-#-------------------End Pywidgets------------------------
-
-
 #------Window-------
 WINDOW_WIDTH = 1280
 WINDOW_HEIGHT = 720
@@ -20,6 +14,14 @@ FRAMES_PER_SECOND = 30
 
 #-----Game Constants-------
 numberOfGenerators1 = 0
+numberOfGenerators2 = 0
+numberOfGenerators3 = 0
+
+cityPowerDemand1 = 50
+cityPowerDemand2 = 100
+cityPowerDemand3 = 150
+
+
 
 #-----End Game Constants---
 
@@ -48,6 +50,9 @@ backGroundImage = pygame.image.load("images/background.jpg")
 
 #----------Counters---------------
 generatorCounter1 = 0
+generatorCounter2 = 0
+generatorCounter3 = 0
+
 brokenGeneratorCounter = 0
 
 #---------End Counters------------
@@ -63,6 +68,8 @@ buyGenerator3 = pygwidgets.TextButton(window, (460, 655), 'Buy a generator 3')
 
 #----------pywidgets display text----------------
 numberOfGen1Display = pygwidgets.DisplayText(window,(400 , 45),'0',textColor = WHITE,fontSize = 50)
+numberOfGen2Display = pygwidgets.DisplayText(window,(700 , 45),'0',textColor = WHITE,fontSize = 50)
+numberOfGen3Display = pygwidgets.DisplayText(window,(800 , 45),'0',textColor = WHITE,fontSize = 50)
 
 cityPowerDemand = pygwidgets.DisplayText(window,(600 , 45), '1', textColor = WHITE , fontSize = 50)
 
@@ -87,6 +94,11 @@ while True:
 
         if buyGenerator2.handleEvent(event):
             print("Gen2 button clicked")
+            if numberOfGenerators2 >=15:
+                print("Maxed gen owned")
+            else:
+                numberOfGenerators2 = numberOfGenerators2 + 1
+                numberOfGen2Display.setValue(numberOfGenerators2)
 
         if buyGenerator3.handleEvent(event):
             print("Gen3 button clicked")
@@ -99,6 +111,7 @@ while True:
     buyGenerator2.draw()
     buyGenerator3.draw()
     numberOfGen1Display.draw()
+    numberOfGen2Display.draw()
     cityPowerDemand.draw()
 
     pygame.display.update()
