@@ -28,7 +28,9 @@ generator = pygame.image.load("power generator1.jpg")
 
 #---------end game function----------
 #-------------load pic---------------
-
+small = 0
+med = 0
+large = 0
 
 def buyNewGenerator():
     #TODO
@@ -93,7 +95,15 @@ inputTextB = pygwidgets.InputText(window, (20, 200), initialFocus=True,\
 
 
 
-box1rect = pygame.Rect(550,600,250,100) #button placement
+box1rect = pygame.Rect(550,600,250,100)
+box1rect = pygame.Rect(550,600,250,100)
+box1rect = pygame.Rect(550,600,250,100)
+box1rect = pygame.Rect(550,600,250,100)
+
+
+
+
+#button placement
 ##box_1 = pygame.draw.rect(window, YELLOW, box1rect) # these are the boxes i have placed
 
 ##box_3 = pygame.draw.rect(window, YELLOW, [550,10,250,100]) 
@@ -108,13 +118,13 @@ box1rect = pygame.Rect(550,600,250,100) #button placement
 
 
 box1rect = pygame.Rect(50,640,100,50)
-box2rect = pygame.Rect(260,640,100,50)
-box3rect = pygame.Rect(470,640,100,50)
-box4rect = pygame.Rect(680,640,100,50)
+box2rect = pygame.Rect(25,525,40,40)
+box3rect = pygame.Rect(75,525,40,40)
+box4rect = pygame.Rect(125,525,40,40)
 
 
 
-restartButton = pygwidgets.CustomButton(window, (1000,50), \
+restartButton = pygwidgets.CustomButton(window, (1000,650), \
                                     'images/RestartButtonUp.png',
                                     down='images/RestartButtonDown.png',
                                     over='images/RestartButtonOver.png',
@@ -125,18 +135,18 @@ restartButton = pygwidgets.CustomButton(window, (1000,50), \
 
 
 backgroundImage= pygame.image.load("background.jpg")
-window.blit(backgroundImage, (0, 0))
+
 
 clock = pygame.time.Clock()
 
 pygame.display.update()
 clock.tick(FRAME_RATE)
 generator.convert_alpha()
-
+box1MenuActive = False
 counter = 0
 box2rect = pygame.Rect(0,0,0,0)
 while True:
-
+    
     for event in pygame.event.get():
         if event.type == pygame.QUIT:           
             pygame.quit()  
@@ -144,20 +154,18 @@ while True:
 
         if event.type == MOUSEBUTTONDOWN:
             if box1rect.collidepoint(event.pos):# invisible button 
+                box1MenuActive = True
                 
-                box2 = boxes(WHITE,300,300,30,30)
-                box2rect = pygame.Rect(300,300,30,30)
             if box2rect.collidepoint(event.pos):
-                clearbox = boxes(BLACK,300,300,30,30)
-                print('second box was clicked')
-                box2rect = pygame.Rect(0,0,0,0)
-                window.blit(generator, (150, 250))
-        
-            
-            
-        
-            
-                
+                small = small + 1
+                print(small)
+                box1MenuActive = False
+            if box3rect.collidepoint(event.pos):
+                med = med +1
+            if box4rect.collidepoint(event.pos):
+                large = large + 1
+
+                          
                 
 
 
@@ -177,13 +185,28 @@ while True:
 
     #window.blit(generator, (150, 250)) 
     counter = counter + 1
+    
+    window.blit(backgroundImage, (0, 0))
     restartButton.draw()
-    texts('button', 60, WHITE, 100,500)
+    #texts('button', 60, WHITE, 100,500)
     box_1 = pygame.draw.rect(window, YELLOW, [50,640,100,50])
     box_2 = pygame.draw.rect(window, YELLOW, [260,640,100,50])
     box_3 = pygame.draw.rect(window, YELLOW, [470,640,100,50])
     box_4 = pygame.draw.rect(window, YELLOW, [680,640,100,50])
 
+##    box2 = boxes(BLACK,0,0,0,0)
+##    box3 = boxes(BLACK,0,0,0,0)
+##    box4 = boxes(BLACK,0,0,0,0)
+##    box5 = boxes(BLACK,0,0,0,0)
+
+
+
+
+    if box1MenuActive == True:
+        box2 = boxes(WHITE,25,525,200,100)
+        box3 = boxes(BLUE,25,525,40,40)
+        box4 = boxes(BLUE,75,525,40,40)
+        box5 = boxes(BLUE,125,525,40,40)
     
     pygame.display.update()
     #window.blit(backgroundImage, (0, 0))
