@@ -45,7 +45,7 @@ clock = pygame.time.Clock()
 
 #--------loading Images-----------
 backGroundImage = pygame.image.load("images/background.jpg")
-
+#startMenu = pygame.image.load("menuPlaceHolderGame.jpg")
 #-------End Loading Images--------
 
 #----------Counters---------------
@@ -76,7 +76,32 @@ cityPowerDemand = pygwidgets.DisplayText(window,(600 , 45), '1', textColor = WHI
 #----------End pywidgets display text----------------
 
 
+def startMenu():
+    startMenu = pygame.image.load("menuPlaceHolderGame.jpg")
+    while True:
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                pygame.quit()
+                sys.exit()
+
+        window.blit(startMenu, (0, 0))
+
+        pygame.display.update()
+        clock.tick(FRAMES_PER_SECOND)
+
+
+
+
+
+
+
+
+
 #-----------Game loop------------------
+
+
+startMenu()
+
 while True:
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
