@@ -80,7 +80,10 @@ brokenGeneratorCounter = 0
 def startMenu():
     WHITE = (255,255,255)
     startMenu = pygame.image.load("menuPlaceHolderGame.jpg")
+    
     start = pygwidgets.TextButton(window, (45, 655), 'start game')
+    quitGame = pygwidgets.TextButton(window, (45, 555), 'quit game')
+    
     #starMenuButton = pygwidgets.DisplayText(window (400,50),'Start', textColor = WHITE,fontSize=50)
 
     while True:
@@ -93,8 +96,14 @@ def startMenu():
                 print("Start")
                 gameLevel1()
 
+            if quitGame.handleEvent(event):
+                print("quit")
+                pygame.quit()
+                quit()
+
         window.blit(startMenu, (0, 0))
         start.draw()
+        quitGame.draw()
 
         pygame.display.update()
         clock.tick(FRAMES_PER_SECOND)
@@ -172,5 +181,4 @@ def gameLevel1():
 
 
 startMenu()
-#gameLevel1()
 
