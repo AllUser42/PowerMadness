@@ -22,7 +22,17 @@ malfunction = random.randrange(1,11)
 POWER_OUTPUT = 0.00
 inventory = []
 citySize = 0
-generator = pygame.image.load("power generator1.jpg")
+generatorSmall = [pygame.image.load("smallGenerator/1.jpg"),pygame.image.load("smallGenerator/2.jpg"),pygame.image.load("smallGenerator/3.jpg"),pygame.image.load("smallGenerator/4.jpg"),\
+                  pygame.image.load("smallGenerator/5.jpg"),pygame.image.load("smallGenerator/6.jpg"),pygame.image.load("smallGenerator/7.jpg"),pygame.image.load("smallGenerator/8.jpg"),\
+                  pygame.image.load("smallGenerator/9.jpg"),pygame.image.load("smallGenerator/10.jpg"),pygame.image.load("smallGenerator/11.jpg"),pygame.image.load("smallGenerator/12.jpg"),\
+                  pygame.image.load("smallGenerator/13.jpg"),pygame.image.load("smallGenerator/14.jpg"),pygame.image.load("smallGenerator/15.jpg"),pygame.image.load("smallGenerator/16.jpg"),\
+                  pygame.image.load("smallGenerator/17.jpg"),pygame.image.load("smallGenerator/18.jpg"),pygame.image.load("smallGenerator/19.jpg"),pygame.image.load("smallGenerator/20.jpg"),\
+                  pygame.image.load("smallGenerator/21.jpg"),pygame.image.load("smallGenerator/22.jpg"),pygame.image.load("smallGenerator/23.jpg"),pygame.image.load("smallGenerator/24.jpg"),\
+                  pygame.image.load("smallGenerator/25.jpg"),pygame.image.load("smallGenerator/26.jpg"),pygame.image.load("smallGenerator/27.jpg"),pygame.image.load("smallGenerator/28.jpg"),\
+                  pygame.image.load("smallGenerator/29.jpg"),pygame.image.load("smallGenerator/30.jpg"),pygame.image.load("smallGenerator/31.jpg"),pygame.image.load("smallGenerator/32.jpg"),\
+                  pygame.image.load("smallGenerator/33.jpg"),pygame.image.load("smallGenerator/34.jpg"),pygame.image.load("smallGenerator/35.jpg"),pygame.image.load("smallGenerator/36.jpg"),\
+                  pygame.image.load("smallGenerator/37.jpg"),pygame.image.load("smallGenerator/38.jpg"),pygame.image.load("smallGenerator/39.jpg")]
+
 
 
 
@@ -141,7 +151,7 @@ clock = pygame.time.Clock()
 
 pygame.display.update()
 clock.tick(FRAME_RATE)
-generator.convert_alpha()
+
 box1MenuActive = False
 counter = 0
 box2rect = pygame.Rect(0,0,0,0)
@@ -155,6 +165,7 @@ while True:
         if event.type == MOUSEBUTTONDOWN:
             if box1rect.collidepoint(event.pos):# invisible button 
                 box1MenuActive = True
+                window.blit(generatorSmall, (150,250))
                 
             if box2rect.collidepoint(event.pos):
                 small = small + 1
