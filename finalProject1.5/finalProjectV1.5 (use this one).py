@@ -165,7 +165,7 @@ while True:
         if event.type == MOUSEBUTTONDOWN:
             if box1rect.collidepoint(event.pos):# invisible button 
                 box1MenuActive = True
-                window.blit(generatorSmall, (150,250))
+                
                 
             if box2rect.collidepoint(event.pos):
                 small = small + 1
