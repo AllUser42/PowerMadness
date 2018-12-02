@@ -22,18 +22,28 @@ malfunction = random.randrange(1,11)
 POWER_OUTPUT = 0.00
 inventory = []
 citySize = 0
-generatorSmall = pygame.image.load("generatorSmallClip")
-generatorMed = pygame.image.load("generatorMedClip")
-generatorLarge = pygame.image.load("generatorLargeClip")
-city1NoPower =pygame.image.load('city1NoPower')
-city1MedPower = pygame.image.load('city1MedPower')
-city1MaxPower = pygame.image.load('city1MaxPower')
-
+genarator = [pygame.image.load("generatorSmallClip.jpg"),pygame.image.load("generatorMedClip.jpg"),pygame.image.load("generatorLargeClip.jpg")]
+#generatorSmall = pygame.image.load("generatorSmallClip.jpg")
+#generatorMed = pygame.image.load("generatorMedClip.jpg")
+#generatorLarge = pygame.image.load("generatorLargeClip.jpg")
+cityList = [pygame.image.load('city1NoPower.jpg'),pygame.image.load('city1MedPower.jpg'),pygame.image.load('city1MaxPower.jpg'),\
+        pygame.image.load('city2NoPower.jpg'),pygame.image.load('city2MedPower.jpg'),pygame.image.load('city2MaxPower.jpg'),\
+        pygame.image.load('lasVegasNoPower.jpg'),pygame.image.load('lasVegasMedPower.jpg'),pygame.image.load('lasVegasMaxPower.jpg')]
+#city1NoPower = pygame.image.load('city1NoPower.jpg')
+#city1MedPower = pygame.image.load('city1MedPower.jpg')
+#city1MaxPower = pygame.image.load('city1MaxPower.jpg')
+#city2NoPower = pygame.image.load('city2NoPower.jpg')
+#city2MedPower = pygame.image.load('city2MedPower.jpg')
+#city2MaxPower = pygame.image.load('city2MaxPower.jpg')
+#city3NoPower = pygame.image.load('lasVegasNoPower.jpg')
+#city3MedPower = pygame.image.load('lasVegasMedPower.jpg')
+#city3MaxPower = pygame.image.load('lasVegasMaxPower.jpg')
 #---------end game function----------
 #-------------load pic---------------
 small = 0
 med = 0
 large = 0
+counter = 0
 
 def buyNewGenerator():
     #TODO
@@ -44,10 +54,9 @@ def buyNewGenerator():
     pass
 
 def city():
-    #TODO
-    #power comsumtion
-    
-    #output cash
+    if counter == 0:
+        window.blit(city[0](309,402))
+        
     
     pass
 
@@ -156,19 +165,12 @@ while True:
             sys.exit()
 
         if event.type == MOUSEBUTTONDOWN:
-            if box1rect.collidepoint(event.pos):# invisible button 
-                box1MenuActive = True
+            if box1rect.collidepoint(event.pos):# invisible button
+                city()
                 
+                window.blit(city1NoPower, (150, 250))
                 
-            if box2rect.collidepoint(event.pos):
-                small = small + 1
-                print(small)
-                box1MenuActive = False
-            if box3rect.collidepoint(event.pos):
-                med = med + 1
-            if box4rect.collidepoint(event.pos):
-                large = large + 1
-
+            
                           
                 
 
@@ -186,11 +188,12 @@ while True:
 
 
 
-
+    
     #window.blit(generator, (150, 250)) 
     counter = counter + 1
     
     window.blit(backgroundImage, (0, 0))
+    city()
     restartButton.draw()
     #texts('button', 60, WHITE, 100,500)
     box_1 = pygame.draw.rect(window, YELLOW, [50,640,100,50])
