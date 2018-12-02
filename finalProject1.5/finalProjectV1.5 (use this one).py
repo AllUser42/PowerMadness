@@ -22,19 +22,12 @@ malfunction = random.randrange(1,11)
 POWER_OUTPUT = 0.00
 inventory = []
 citySize = 0
-generatorSmall = [pygame.image.load("smallGenerator/1.jpg"),pygame.image.load("smallGenerator/2.jpg"),pygame.image.load("smallGenerator/3.jpg"),pygame.image.load("smallGenerator/4.jpg"),\
-                  pygame.image.load("smallGenerator/5.jpg"),pygame.image.load("smallGenerator/6.jpg"),pygame.image.load("smallGenerator/7.jpg"),pygame.image.load("smallGenerator/8.jpg"),\
-                  pygame.image.load("smallGenerator/9.jpg"),pygame.image.load("smallGenerator/10.jpg"),pygame.image.load("smallGenerator/11.jpg"),pygame.image.load("smallGenerator/12.jpg"),\
-                  pygame.image.load("smallGenerator/13.jpg"),pygame.image.load("smallGenerator/14.jpg"),pygame.image.load("smallGenerator/15.jpg"),pygame.image.load("smallGenerator/16.jpg"),\
-                  pygame.image.load("smallGenerator/17.jpg"),pygame.image.load("smallGenerator/18.jpg"),pygame.image.load("smallGenerator/19.jpg"),pygame.image.load("smallGenerator/20.jpg"),\
-                  pygame.image.load("smallGenerator/21.jpg"),pygame.image.load("smallGenerator/22.jpg"),pygame.image.load("smallGenerator/23.jpg"),pygame.image.load("smallGenerator/24.jpg"),\
-                  pygame.image.load("smallGenerator/25.jpg"),pygame.image.load("smallGenerator/26.jpg"),pygame.image.load("smallGenerator/27.jpg"),pygame.image.load("smallGenerator/28.jpg"),\
-                  pygame.image.load("smallGenerator/29.jpg"),pygame.image.load("smallGenerator/30.jpg"),pygame.image.load("smallGenerator/31.jpg"),pygame.image.load("smallGenerator/32.jpg"),\
-                  pygame.image.load("smallGenerator/33.jpg"),pygame.image.load("smallGenerator/34.jpg"),pygame.image.load("smallGenerator/35.jpg"),pygame.image.load("smallGenerator/36.jpg"),\
-                  pygame.image.load("smallGenerator/37.jpg"),pygame.image.load("smallGenerator/38.jpg"),pygame.image.load("smallGenerator/39.jpg")]
-
-
-
+generatorSmall = pygame.image.load("generatorSmallClip")
+generatorMed = pygame.image.load("generatorMedClip")
+generatorLarge = pygame.image.load("generatorLargeClip")
+city1NoPower =pygame.image.load('city1NoPower')
+city1MedPower = pygame.image.load('city1MedPower')
+city1MaxPower = pygame.image.load('city1MaxPower')
 
 #---------end game function----------
 #-------------load pic---------------
@@ -172,7 +165,7 @@ while True:
                 print(small)
                 box1MenuActive = False
             if box3rect.collidepoint(event.pos):
-                med = med +1
+                med = med + 1
             if box4rect.collidepoint(event.pos):
                 large = large + 1
 
