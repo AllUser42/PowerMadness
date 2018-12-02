@@ -26,9 +26,9 @@ genarator = [pygame.image.load("generatorSmallClip.jpg"),pygame.image.load("gene
 #generatorSmall = pygame.image.load("generatorSmallClip.jpg")
 #generatorMed = pygame.image.load("generatorMedClip.jpg")
 #generatorLarge = pygame.image.load("generatorLargeClip.jpg")
-cityList = [pygame.image.load('city1NoPower.jpg'),pygame.image.load('city1MedPower.jpg'),pygame.image.load('city1MaxPower.jpg'),\
-        pygame.image.load('city2NoPower.jpg'),pygame.image.load('city2MedPower.jpg'),pygame.image.load('city2MaxPower.jpg'),\
-        pygame.image.load('lasVegasNoPower.jpg'),pygame.image.load('lasVegasMedPower.jpg'),pygame.image.load('lasVegasMaxPower.jpg')]
+city1List = [pygame.image.load('city1NoPower.jpg'),pygame.image.load('city1MedPower.jpg'),pygame.image.load('city1MaxPower.jpg')]
+city2Lsit = [pygame.image.load('city2NoPower.jpg'),pygame.image.load('city2MedPower.jpg'),pygame.image.load('city2MaxPower.jpg')]
+City3List = [pygame.image.load('lasVegasNoPower.jpg'),pygame.image.load('lasVegasMedPower.jpg'),pygame.image.load('lasVegasMaxPower.jpg')]
 #city1NoPower = pygame.image.load('city1NoPower.jpg')
 #city1MedPower = pygame.image.load('city1MedPower.jpg')
 #city1MaxPower = pygame.image.load('city1MaxPower.jpg')
