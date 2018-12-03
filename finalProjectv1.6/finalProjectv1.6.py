@@ -75,6 +75,35 @@ brokenGeneratorCounter = 0
 ##    numberOfGen3Display = pygwidgets.DisplayText(window,(800 , 45),'0',textColor = WHITE,fontSize = 50)
 ##    cityPowerDemand = pygwidgets.DisplayText(window,(600 , 45), '1', textColor = WHITE , fontSize = 50)
 
+def wonGameScreen():
+    wonGameScreen = pygame.image.load("images/winScreen.jpg")
+    
+    nextLevel = pygwidgets.TextButton(window, (45, 655), 'Continue to next level')
+    quitGame = pygwidgets.TextButton(window, (45, 555), 'quit game')
+    
+
+    while True:
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                pygame.quit()
+                sys.exit()
+
+            if quitGame.handleEvent(event):
+                pygame.quit()
+                quit()
+
+            if nextLevel.handleEvent(event):
+                print('Go to next level')
+                gameLevel2()
+
+        window.blit(wonGameScreen, (0, 0))
+        nextLevel.draw()
+        quitGame.draw()
+        pygame.display.update()
+        clock.tick(FRAMES_PER_SECOND)
+
+
+
 
 
 def startMenu():
@@ -166,7 +195,7 @@ def gameLevel1():
 
         if totalPowerOutput == cityPowerDemand1:
             print("You passed!")
-            gameLevel2()
+            wonGameScreen()
             #print(totalPowerOutput)
             
                 
@@ -249,7 +278,7 @@ def gameLevel2():
                 
 
         window.blit(backGroundImage, (0, 0))
-        pygame.draw.rect(myDisplay ,WHITE, [00, 475, 2000, 1000], 65)
+        #pygame.draw.rect(myDisplay ,WHITE, [00, 475, 2000, 1000], 65)
         buyGenerator1.draw()
         buyGenerator2.draw()
         buyGenerator3.draw()
@@ -268,4 +297,5 @@ def gameLevel2():
 
 #Starts game menu
 startMenu()
+#wonGameScreen()
 
