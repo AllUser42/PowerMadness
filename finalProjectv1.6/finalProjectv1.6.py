@@ -75,10 +75,6 @@ brokenGeneratorCounter = 0
 ##    numberOfGen3Display = pygwidgets.DisplayText(window,(800 , 45),'0',textColor = WHITE,fontSize = 50)
 ##    cityPowerDemand = pygwidgets.DisplayText(window,(600 , 45), '1', textColor = WHITE , fontSize = 50)
 
-def generator1():
-
-
-
 
 def wonGameScreen():
     wonGameScreen = pygame.image.load("images/winScreen.jpg")
@@ -198,7 +194,7 @@ def gameLevel1():
             
 
             
-        totalPowerOutput = numberOfGenerators1 + numberOfGenerators2 + numberOfGenerators3
+        totalPowerOutput = numberOfGenerators1 + (numberOfGenerators2 * 5) + (numberOfGenerators3 * 10)
 
         if totalPowerOutput == cityPowerDemand1:
             print("level 1 city")
