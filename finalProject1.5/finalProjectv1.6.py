@@ -40,6 +40,7 @@ WHITE = (255,255,255)
 #-----Initialize the world--------
 pygame.init()
 window = pygame.display.set_mode([WINDOW_WIDTH, WINDOW_HEIGHT])
+pygame.display.set_caption('Power Madness')
 clock = pygame.time.Clock()
 #-----End Initialize the world----
 
