@@ -75,6 +75,11 @@ brokenGeneratorCounter = 0
 ##    numberOfGen3Display = pygwidgets.DisplayText(window,(800 , 45),'0',textColor = WHITE,fontSize = 50)
 ##    cityPowerDemand = pygwidgets.DisplayText(window,(600 , 45), '1', textColor = WHITE , fontSize = 50)
 
+def generator1():
+
+
+
+
 def wonGameScreen():
     wonGameScreen = pygame.image.load("images/winScreen.jpg")
     
@@ -156,7 +161,9 @@ def gameLevel1():
     numberOfGenerators3 = 0
 
     #Demand of city
-    cityPowerDemand1 = 45
+    cityPowerDemand1 = 33
+    cityPowerDemand2 = 66
+    cityPowerDemand3 = 100
     
     while True:
         for event in pygame.event.get():
@@ -194,10 +201,14 @@ def gameLevel1():
         totalPowerOutput = numberOfGenerators1 + numberOfGenerators2 + numberOfGenerators3
 
         if totalPowerOutput == cityPowerDemand1:
-            print("You passed!")
+            print("level 1 city")
+        elif totalPowerOutput == cityPowerDemand2:
+            print("level 2 city")
+        elif totalPowerOutput == cityPowerDemand3:
+            print("Power met")
             wonGameScreen()
-            #print(totalPowerOutput)
-            
+        else:
+            pass
                 
 
         window.blit(backGroundImage, (0, 0))
