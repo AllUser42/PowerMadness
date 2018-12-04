@@ -40,6 +40,7 @@ WHITE = (255,255,255)
 #-----Initialize the world--------
 pygame.init()
 window = pygame.display.set_mode([WINDOW_WIDTH, WINDOW_HEIGHT])
+pygame.display.set_caption('Power Madness')
 clock = pygame.time.Clock()
 #-----End Initialize the world----
 
@@ -163,14 +164,15 @@ def cityImageLevelThreeCityTwo():
     window.blit(city2Max,(585,174))
 
 #city 3 power
+    
 def cityImageLevelOneCityTwo():
-    city3no =
+    city3no = pygame.image.load('lasVegasNoPower.jpg')
+    window.blit(city3no,(585,174))
+def cityImageLevelOneCityTwo():
+    city3Med = pygame.image.load('lasVegasMedPower.jpg')
     window.blit(city3,(585,174))
 def cityImageLevelOneCityTwo():
-    city3Med =
-    window.blit(city3,(585,174))
-def cityImageLevelOneCityTwo():
-    city3Max = 
+    city3Max = pygame.image.load('lasVegasMaxPower.jpg')
     window.blit(city3,(585,174))
 
 
