@@ -40,6 +40,7 @@ WHITE = (255,255,255)
 #-----Initialize the world--------
 pygame.init()
 window = pygame.display.set_mode([WINDOW_WIDTH, WINDOW_HEIGHT])
+pygame.display.set_caption('Power Madness')
 clock = pygame.time.Clock()
 #-----End Initialize the world----
 
@@ -74,7 +75,6 @@ brokenGeneratorCounter = 0
 ##    numberOfGen2Display = pygwidgets.DisplayText(window,(700 , 45),'0',textColor = WHITE,fontSize = 50)
 ##    numberOfGen3Display = pygwidgets.DisplayText(window,(800 , 45),'0',textColor = WHITE,fontSize = 50)
 ##    cityPowerDemand = pygwidgets.DisplayText(window,(600 , 45), '1', textColor = WHITE , fontSize = 50)
-
 
 def wonGameScreen():
     wonGameScreen = pygame.image.load("images/winScreen.jpg")
@@ -138,6 +138,44 @@ def startMenu():
         pygame.display.update()
         clock.tick(FRAMES_PER_SECOND)
 
+#City 1 power 
+def cityImageLevelOneCityOne():
+    city1no = pygame.image.load('city1NoPower.jpg')
+    
+
+def cityImageLevelTwoCityOne():
+    city1Med = pygame.image.load('city1MedPower.jpg')
+    window.blit(city1Med,(585,174))
+
+def cityImageLevelThreeCityOne():
+    city1Max = pygame.image.load('city1MaxPower.jpg')
+    window.blit(city1Max,(585,174))
+
+#City 2 power
+    
+def cityImageLevelOneCityTwo():
+    city2no = pygame.image.load('city2NoPower.jpg')
+    window.blit(city2no,(585,174))
+def cityImageLevelTwoCityTwo():
+    city2Med = pygame.image.load('city2MedPower.jpg')
+    window.blit(city2Med,(585,174))
+def cityImageLevelThreeCityTwo():
+    city2Max = pygame.image.load('city2MaxPower.jpg')
+    window.blit(city2Max,(585,174))
+
+#city 3 power
+    
+def cityImageLevelOneCityTwo():
+    city3no = pygame.image.load('lasVegasNoPower.jpg')
+    window.blit(city3no,(585,174))
+def cityImageLevelOneCityTwo():
+    city3Med = pygame.image.load('lasVegasMedPower.jpg')
+    window.blit(city3,(585,174))
+def cityImageLevelOneCityTwo():
+    city3Max = pygame.image.load('lasVegasMaxPower.jpg')
+    window.blit(city3,(585,174))
+
+
 
 def gameLevel1():
     #Buttons to buy generators
@@ -157,9 +195,8 @@ def gameLevel1():
     numberOfGenerators3 = 0
 
     #Demand of city
-    cityPowerDemand1 = 33
-    cityPowerDemand2 = 66
-    cityPowerDemand3 = 100
+    cityPowerDemand1 = 45
+    
     
     while True:
         for event in pygame.event.get():
@@ -194,17 +231,13 @@ def gameLevel1():
             
 
             
-        totalPowerOutput = numberOfGenerators1 + (numberOfGenerators2 * 5) + (numberOfGenerators3 * 10)
+        totalPowerOutput = numberOfGenerators1 + numberOfGenerators2 + numberOfGenerators3
 
         if totalPowerOutput == cityPowerDemand1:
-            print("level 1 city")
-        elif totalPowerOutput == cityPowerDemand2:
-            print("level 2 city")
-        elif totalPowerOutput == cityPowerDemand3:
-            print("Power met")
+            print("You passed!")
             wonGameScreen()
-        else:
-            pass
+            #print(totalPowerOutput)
+            
                 
 
         window.blit(backGroundImage, (0, 0))
