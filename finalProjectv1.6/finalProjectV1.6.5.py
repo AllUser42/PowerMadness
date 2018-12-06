@@ -16,7 +16,7 @@ ORANGE = (255,128,0)
 YELLOW = (255,255,0)
 GREEN = (0,153,0)
 BLUE = (0,0,255)
-PURPLE = (127,0,255)
+PURPLE = (127,0,255)                
 BLACK = (0,0,0)
 WHITE = (255,255,255)
 
@@ -51,9 +51,12 @@ while True:
                 sys.exit()
 
             if startGame.handleEvent(event):
-
+                print('Start game')
+                
+                
 
 
         window.blit(startMenu, (0, 0))
+        startGame.draw()
         pygame.display.update()
         clock.tick(FRAMES_PER_SECOND)
