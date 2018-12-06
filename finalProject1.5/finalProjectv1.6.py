@@ -256,8 +256,9 @@ while True:
             
             totalPowerOutput = (numberOfGenerators1) + (numberOfGenerators2 * 5) + (numberOfGenerators3 * 10)
             ''' u need a level complets here so that it 
-            #reset the inventory also in the reset state ment u can have a plus 1 sate indecator
-            do it with all the level'''
+            reset the inventory also in the reset state ment u can have a plus 1 sate indecator
+            do it with all the level
+            '''
             
 
             if state == 2:
