@@ -42,6 +42,9 @@ levelThree = 'level three'
 startGame = pygwidgets.TextButton(window, (45, 655), 'start game')
 
 
+cityImage = pygwidgets.ImageCollection(window, (100, 200),\
+                                     {‘image1’:’images/SomeImage.png’, ‘image2’:’images/Image2.png’, ‘image3’:’images/Image3.png’}, ‘image1’)
+
 #Main loop
 
 while True:
@@ -53,10 +56,10 @@ while True:
             if startGame.handleEvent(event):
                 print('Start game')
                 
-                
 
 
         window.blit(startMenu, (0, 0))
         startGame.draw()
+        cityImage.draw()
         pygame.display.update()
         clock.tick(FRAMES_PER_SECOND)
