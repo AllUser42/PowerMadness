@@ -292,7 +292,7 @@ def gameLevel2():
         numberOfGen1Display.draw()
         numberOfGen2Display.draw()
         numberOfGen3Display.draw()
-        cityPowerDemand.draw()
+        cityPowerDemand.draw ()
 
         pygame.display.update()
         clock.tick(FRAMES_PER_SECOND)

@@ -59,6 +59,8 @@ brokenGeneratorCounter = 0
 #---------End Counters------------
 
 
+
+
 #----------pygwidgets buttons-------------
 ##def generatorButtons():
 ##    buyGenerator1 = pygwidgets.TextButton(window, (45, 655), 'Buy a generator 1')
@@ -210,7 +212,12 @@ buyGenerator1 = pygwidgets.TextButton(window, (45, 655), 'Buy a generator 1')
 buyGenerator2 = pygwidgets.TextButton(window, (250, 655), 'Buy a generator 2')
 buyGenerator3 = pygwidgets.TextButton(window, (460, 655), 'Buy a generator 3')
 
-    
+numberOfGenerators1 = 0
+numberOfGenerators2 = 0
+numberOfGenerators3 = 0
+
+cityPowerDemand1 = 33
+
 while True:
     for event in pygame.event.get():
             if event.type == pygame.QUIT:
@@ -226,7 +233,7 @@ while True:
                         pygame.quit()
                     quit()
                 state = state + 1
-            if state == 1:
+            elif state == 1:
                 if buyGenerator1.handleEvent(event):
                     print("Gen button clicked # is" , numberOfGenerators1)
                 if numberOfGenerators1 >= 15:
