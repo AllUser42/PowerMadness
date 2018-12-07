@@ -298,13 +298,12 @@ while True:
                     numberOfGenerators3 = numberOfGenerators3 + 1
                     numberOfGen3Display.setValue(numberOfGenerators3)
             
-<<<<<<< HEAD
+
                 
     if state == 0: #Wrong
-=======
+
 #start screen                
     if state == 0:
->>>>>>> 748040a2849b34a06e32cb2cd7aa41f362dae68a
 
 
         
@@ -316,17 +315,13 @@ while True:
         clock.tick(FRAMES_PER_SECOND)
         
             
-        
-<<<<<<< HEAD
+
 
     elif state == 1: #Wrong
-=======
+
 #level 1 screen
     elif state == 1:
         
->>>>>>> 748040a2849b34a06e32cb2cd7aa41f362dae68a
-
-
         
 
         window.blit(backGroundImage, (0, 0))
@@ -349,13 +344,13 @@ while True:
     do it with all the level
     '''
     
-<<<<<<< HEAD
+
 
     if state == 2: #Wrong already used.
-=======
+
 #level 2 screen
     if state == 2:
->>>>>>> 748040a2849b34a06e32cb2cd7aa41f362dae68a
+
         if totalPowerOutput == cityPowerDemand1:
             print("You passed!")
             wonGameScreen()#Calling function that does not exist 
