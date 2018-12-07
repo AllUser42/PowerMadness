@@ -298,7 +298,7 @@ while True:
                     numberOfGen3Display.setValue(numberOfGenerators3)
             
                 
-    if state == 0:
+    if state == 0: #Wrong
 
 
         
@@ -312,7 +312,7 @@ while True:
             
         
 
-    elif state == 1:
+    elif state == 1: #Wrong
 
 
         
@@ -338,13 +338,13 @@ while True:
     '''
     
 
-    if state == 2:
+    if state == 2: #Wrong already used.
         if totalPowerOutput == cityPowerDemand1:
             print("You passed!")
-            wonGameScreen()
+            wonGameScreen()#Calling function that does not exist 
         
 
-        window.blit(backGroundImage, (0, 0))
+        window.blit(backGroundImage, (0, 0))#reloading same image for no reason
         buyGenerator1.draw()
         buyGenerator2.draw()
         buyGenerator3.draw()

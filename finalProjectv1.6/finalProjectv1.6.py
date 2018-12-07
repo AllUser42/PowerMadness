@@ -285,14 +285,13 @@ def gameLevel2():
                 
 
         window.blit(backGroundImage, (0, 0))
-        #pygame.draw.rect(myDisplay ,WHITE, [00, 475, 2000, 1000], 65)
         buyGenerator1.draw()
         buyGenerator2.draw()
         buyGenerator3.draw()
         numberOfGen1Display.draw()
         numberOfGen2Display.draw()
         numberOfGen3Display.draw()
-        cityPowerDemand.draw ()
+        cityPowerDemand.draw()
 
         pygame.display.update()
         clock.tick(FRAMES_PER_SECOND)
