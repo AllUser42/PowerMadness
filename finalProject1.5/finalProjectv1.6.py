@@ -236,6 +236,7 @@ while True:
         if event.type == pygame.QUIT:
             pygame.quit()
             sys.exit()
+        # all handle events are in the for loop
         if state == 0:
             if start.handleEvent(event):
                 print("Start")
@@ -297,8 +298,13 @@ while True:
                     numberOfGenerators3 = numberOfGenerators3 + 1
                     numberOfGen3Display.setValue(numberOfGenerators3)
             
+<<<<<<< HEAD
                 
     if state == 0: #Wrong
+=======
+#start screen                
+    if state == 0:
+>>>>>>> 748040a2849b34a06e32cb2cd7aa41f362dae68a
 
 
         
@@ -311,8 +317,14 @@ while True:
         
             
         
+<<<<<<< HEAD
 
     elif state == 1: #Wrong
+=======
+#level 1 screen
+    elif state == 1:
+        
+>>>>>>> 748040a2849b34a06e32cb2cd7aa41f362dae68a
 
 
         
@@ -337,8 +349,13 @@ while True:
     do it with all the level
     '''
     
+<<<<<<< HEAD
 
     if state == 2: #Wrong already used.
+=======
+#level 2 screen
+    if state == 2:
+>>>>>>> 748040a2849b34a06e32cb2cd7aa41f362dae68a
         if totalPowerOutput == cityPowerDemand1:
             print("You passed!")
             wonGameScreen()#Calling function that does not exist 
@@ -356,11 +373,25 @@ while True:
 
         pygame.display.update()
         clock.tick(FRAMES_PER_SECOND)
+#level 3 screen
+    if state == 3:
+        
+        window.blit(backGroundImage, (0, 0))
+        buyGenerator1.draw()
+        buyGenerator2.draw()
+        buyGenerator3.draw()
+        numberOfGen1Display.draw()
+        numberOfGen2Display.draw()
+        numberOfGen3Display.draw()
+        cityPowerDemand.draw()
+        
 
+        pygame.display.update()
+        clock.tick(FRAMES_PER_SECOND)
 
 
 
 #Starts game menu
-startMenu()
+#startMenu()
 #wonGameScreen()
 
