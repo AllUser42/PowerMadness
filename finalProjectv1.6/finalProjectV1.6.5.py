@@ -73,7 +73,7 @@ while True:
 
     elif state == LEVEL_ONE or state == LEVEL_TWO or state == LEVEL_THREE:
         if state == LEVEL_ONE:
-            print('in level one')
+            #print('in level one')
             window.blit(backGroundImage,(0,0))
             pygame.display.update()
             clock.tick(FRAMES_PER_SECOND)
