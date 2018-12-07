@@ -74,6 +74,24 @@ while True:
     elif state == LEVEL_ONE or state == LEVEL_TWO or state == LEVEL_THREE:
         if state == LEVEL_ONE:
             #print('in level one')
+
+            buyGenerator1 = pygwidgets.TextButton(window, (55, 655), 'Buy a generator 1')
+            #buyGenerator2 = pygwidgets.TextButton(window, (250, 655), 'Buy a generator 2')
+            #buyGenerator3 = pygwidgets.TextButton(window, (460, 655), 'Buy a generator 3')
+
+            if buyGenerator1.handleEvent(event):
+                print("Gen button clicked # is" , numberOfGenerators1)
+                if numberOfGenerators1 >= 15:
+                    print("Max gen owned")
+                else:
+                    numberOfGenerators1 = numberOfGenerators1 + 1
+                    numberOfGen1Display.setValue(numberOfGenerators1)
+
+
+            
+            buyGenerator1.draw()
+            #buyGenerator2.draw()
+            #buyGenerator3.draw()
             window.blit(backGroundImage,(0,0))
             pygame.display.update()
             clock.tick(FRAMES_PER_SECOND)
