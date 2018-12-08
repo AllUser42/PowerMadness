@@ -56,7 +56,7 @@ generatorCounter3 = 0
 state = 0
 brokenGeneratorCounter = 0
 totalPower = 0
-
+battery = 0
 
 #---------End Counters------------
 
@@ -184,26 +184,7 @@ startMenu = pygame.image.load("menuPlaceHolderGame.jpg")
 
 
 
-def gameLevel2():
-    #Buttons to buy generators
-    buyGenerator1 = pygwidgets.TextButton(window, (45, 655), 'Buy a generator 1')
-    buyGenerator2 = pygwidgets.TextButton(window, (250, 655), 'Buy a generator 2')
-    buyGenerator3 = pygwidgets.TextButton(window, (460, 655), 'Buy a generator 3')
 
-    #Display game data
-    numberOfGen1Display = pygwidgets.DisplayText(window,(400 , 45),'0',textColor = WHITE,fontSize = 50)
-    numberOfGen2Display = pygwidgets.DisplayText(window,(700 , 45),'0',textColor = WHITE,fontSize = 50)
-    numberOfGen3Display = pygwidgets.DisplayText(window,(800 , 55),'0',textColor = WHITE,fontSize = 50)
-    cityPowerDemand = pygwidgets.DisplayText(window,(600 , 45), '1', textColor = WHITE , fontSize = 50)
-
-    #Game inventory
-    numberOfGenerators1 = 0
-    numberOfGenerators2 = 0
-    numberOfGenerators3 = 0
-
-    #Demand of city
-
-    myDisplay = pygame.display.set_mode((1280 ,720))
 
 
 #Buttons temp
@@ -224,9 +205,10 @@ def PowerDemand():
         powerDemand = 0
     if state == 1:
         powerDemand = 100
-    if state == 2:
-        powerDemand = 200
+
     return powerDemand
+        
+    
 
 
 
@@ -235,6 +217,7 @@ numberOfGen2Display = pygwidgets.DisplayText(window,(420 , 45),'0',textColor = W
 numberOfGen3Display = pygwidgets.DisplayText(window,(500 , 45),'0',textColor = WHITE,fontSize = 50)
 cityPowerDemand = pygwidgets.DisplayText(window,(100 , 45), PowerDemand(), textColor = WHITE , fontSize = 50)
 totalPowerDisplay = pygwidgets.DisplayText(window,(950 , 45), totalPower, textColor = BLACK , fontSize = 50)
+batteryDisplay = pygwidgets.DisplayText(window,(1100 , 45), battery, textColor = BLACK , fontSize = 50)
 
 
 
@@ -289,7 +272,7 @@ while True:
                     print("Maxed gen owned")
                 else:
                     numberOfGenerators3 = numberOfGenerators3 + 1
-                    numberOfGen3DisplaytotalPower.setValue(numberOfGenerators3)
+                    numberOfGen3Display.setValue(numberOfGenerators3)
         elif state == 2:
             if buyGenerator1.handleEvent(event):
                 print("Gen button clicked # is" , numberOfGenerators1)
@@ -339,6 +322,20 @@ while True:
 
 #level 1 screen
     elif state == 1:
+        battery = 100
+        powerDemand = 100
+        
+        
+
+
+
+
+
+
+
+
+
+        
         if totalPower >= PowerDemand():
             print('done')
 
@@ -353,10 +350,9 @@ while True:
         
         
         
-        
-        
+        cityPowerDemand.setValue(powerDemand)
+        batteryDisplay.setValue(battery)
         window.blit(backGroundImage, (0, 0))
-        cityPowerDemand.setValue(totalPower)
         buyGenerator1.draw()
         buyGenerator2.draw()
         buyGenerator3.draw()
@@ -364,6 +360,7 @@ while True:
         numberOfGen2Display.draw()
         numberOfGen3Display.draw()
         cityPowerDemand.draw()
+        batteryDisplay.draw()
         totalPowerDisplay.draw()
         pygame.display.update()
         clock.tick(FRAMES_PER_SECOND)
