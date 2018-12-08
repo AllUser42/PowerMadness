@@ -55,7 +55,7 @@ numberOfGen2Display = pygwidgets.DisplayText(window,(430 , 45),'0',textColor = W
 numberOfGen3Display = pygwidgets.DisplayText(window,(510 , 45),'0',textColor = WHITE,fontSize = 50)
 totalPowerOutputDisplay = pygwidgets.DisplayText(window,(1000 , 45),'0',textColor = WHITE,fontSize = 50)
 playerMoneyDisplay = pygwidgets.DisplayText(window,(750 , 45),'0',textColor = WHITE,fontSize = 50)
-
+cityPowerDemandDisplay = pygwidgets.DisplayText(window,(65 , 45),'0',textColor = WHITE,fontSize = 50)
 
 #Images chcange
 #cityImage = pygwidgets.ImageCollection(window, (100, 200),\
@@ -71,7 +71,7 @@ numberOfGenerators3 = 0
 playerMoney = 0 
 
 #Random numbers
-removeRandomAmount = random.randrange(0,10)
+#removeRandomAmount = random.randrange(0,10)
 
 
 
@@ -81,6 +81,9 @@ state = START
 #Main loop
 
 while True:
+
+    removeRandomAmount = random.randrange(0,10)
+     
     if state == START:
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
@@ -102,10 +105,21 @@ while True:
 
     elif state == LEVEL_ONE or state == LEVEL_TWO or state == LEVEL_THREE:
         if state == LEVEL_ONE:
+            cityPowerDemand = 250
+            cityPowerDemandDisplay.setValue(cityPowerDemand)
             for event in pygame.event.get():
                 if event.type == pygame.QUIT:
                     pygame.quit()
                     sys.exit()
+
+                if playerMoney == 0:
+                    buyGenerator2.disable()
+                    buyGenerator3.disable()
+                elif playerMoney == 50:
+                    buyGenerator2.enable()
+                elif playerMoney == 100:
+                    buyGenerator3.enable()
+
                     
                 if buyGenerator1.handleEvent(event):
                     print("Gen button clicked # is" , numberOfGenerators1)
@@ -114,8 +128,6 @@ while True:
                     else:
                         numberOfGenerators1 = numberOfGenerators1 + 1
                         numberOfGen1Display.setValue(numberOfGenerators1)
-                        playerMoney = playerMoney - 1
-                        print(playerMoney)
                         
                 
                 if buyGenerator2.handleEvent(event):
@@ -125,6 +137,7 @@ while True:
                     else:
                         numberOfGenerators2 = numberOfGenerators2 + 1
                         numberOfGen2Display.setValue(numberOfGenerators2)
+                        playerMoney = playerMoney - 50
                         
 
                 if buyGenerator3.handleEvent(event):
@@ -138,16 +151,31 @@ while True:
 
             totalPowerOutput = (numberOfGenerators1) + (numberOfGenerators2 * 5) + (numberOfGenerators3 * 10)
 
-            if totalPowerOutput >= 15:
+            if totalPowerOutput == 15:
+                playerMoney = playerMoney + 2
+            elif totalPowerOutput == 30:
+                playerMoney = playerMoney + 4
+
+#----------------------------------------------------------------------
+            if numberOfGenerators1 >= 10:
+                playerMoney = playerMoney - 1
+            
+#----------------------------------------------------------------------
+            
+
+          
+            if totalPowerOutput >= 5:
                 totalPowerOutput = totalPowerOutput - removeRandomAmount
-            elif totalPowerOutput >= 20:
+            elif totalPowerOutput >= 10:
+                totalPowerOutput = totalPowerOutput - removeRandomAmount
+            elif totalPowerOutput >= 15:
                 totalPowerOutput = totalPowerOutput - removeRandomAmount
             
             totalPowerOutputDisplay.setValue(totalPowerOutput)
 
             playerMoneyDisplay.setValue(playerMoney)
 
-            if totalPowerOutput == 200:
+            if totalPowerOutput == 300:
                 print('You passed')
 
             
@@ -159,6 +187,8 @@ while True:
             numberOfGen1Display.draw()
             numberOfGen2Display.draw()
             numberOfGen3Display.draw()
+
+            cityPowerDemandDisplay.draw()
 
             totalPowerOutputDisplay.draw()
             playerMoneyDisplay.draw()
