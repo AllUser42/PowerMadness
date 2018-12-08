@@ -71,7 +71,7 @@ numberOfGenerators3 = 0
 playerMoney = 0 
 
 #Random numbers
-removeRandomAmount = random.randrange(0,10)
+#removeRandomAmount = random.randrange(0,10)
 
 
 
@@ -81,6 +81,9 @@ state = START
 #Main loop
 
 while True:
+
+    removeRandomAmount = random.randrange(0,10)
+     
     if state == START:
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
@@ -106,6 +109,18 @@ while True:
                 if event.type == pygame.QUIT:
                     pygame.quit()
                     sys.exit()
+
+                if playerMoney == 0:
+                    buyGenerator2.disable()
+                    buyGenerator3.disable()
+                else:
+                    buyGenerator2.enable()
+                    buyGenerator3.enable()
+                    
+                    
+
+
+
                     
                 if buyGenerator1.handleEvent(event):
                     print("Gen button clicked # is" , numberOfGenerators1)
@@ -114,8 +129,6 @@ while True:
                     else:
                         numberOfGenerators1 = numberOfGenerators1 + 1
                         numberOfGen1Display.setValue(numberOfGenerators1)
-                        playerMoney = playerMoney - 1
-                        print(playerMoney)
                         
                 
                 if buyGenerator2.handleEvent(event):
@@ -125,6 +138,7 @@ while True:
                     else:
                         numberOfGenerators2 = numberOfGenerators2 + 1
                         numberOfGen2Display.setValue(numberOfGenerators2)
+                        playerMoney = playerMoney - 50
                         
 
                 if buyGenerator3.handleEvent(event):
@@ -138,16 +152,30 @@ while True:
 
             totalPowerOutput = (numberOfGenerators1) + (numberOfGenerators2 * 5) + (numberOfGenerators3 * 10)
 
-            if totalPowerOutput >= 15:
+            if totalPowerOutput == 15:
+                playerMoney = playerMoney + 30
+            elif totalPowerOutput == 30:
+                playerMoney = playerMoney + 60
+
+
+
+            playerMoney = playerMoney - 100 * numberOfGenerators1
+
+
+
+            
+            if totalPowerOutput >= 5:
                 totalPowerOutput = totalPowerOutput - removeRandomAmount
-            elif totalPowerOutput >= 20:
+            elif totalPowerOutput >= 10:
+                totalPowerOutput = totalPowerOutput - removeRandomAmount
+            elif totalPowerOutput >= 15:
                 totalPowerOutput = totalPowerOutput - removeRandomAmount
             
             totalPowerOutputDisplay.setValue(totalPowerOutput)
 
             playerMoneyDisplay.setValue(playerMoney)
 
-            if totalPowerOutput == 200:
+            if totalPowerOutput == 300:
                 print('You passed')
 
             
