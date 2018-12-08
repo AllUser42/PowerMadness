@@ -17,7 +17,7 @@ FRAMES_PER_SECOND = 30
 ##numberOfGenerators2 = 0
 ##numberOfGenerators3 = 0
 ##
-##cityPowerDemand = 50
+##cityPowerDemand1 = 50
 ##cityPowerDemand2 = 100
 ##cityPowerDemand3 = 150
 
@@ -55,7 +55,6 @@ generatorCounter2 = 0
 generatorCounter3 = 0
 state = 0
 brokenGeneratorCounter = 0
-totalPower = 0
 
 
 #---------End Counters------------
@@ -125,7 +124,7 @@ totalPower = 0
 #City 1 power 
 def cityImageLevelOneCityOne():
     city1no = pygame.image.load('city1NoPower.jpg')
-    window.blit(city1no,(585,174))
+    
 
 def cityImageLevelTwoCityOne():
     city1Med = pygame.image.load('city1MedPower.jpg')
@@ -162,25 +161,26 @@ def cityImageLevelOneCityTwo():
 
 startMenu = pygame.image.load("menuPlaceHolderGame.jpg")
 
-###def gameLevel1():
-###Buttons to buy generators
-##buyGenerator1 = pygwidgets.TextButton(window, (45, 655), 'Buy a generator 1')
-##buyGenerator2 = pygwidgets.TextButton(window, (250, 655), 'Buy a generator 2')
-##buyGenerator3 = pygwidgets.TextButton(window, (460, 655), 'Buy a generator 3')
-##
-###Display game data
-##numberOfGen1Display = pygwidgets.DisplayText(window,(400 , 45),'0',textColor = WHITE,fontSize = 50)
-##numberOfGen2Display = pygwidgets.DisplayText(window,(700 , 45),'0',textColor = WHITE,fontSize = 50)
-##numberOfGen3Display = pygwidgets.DisplayText(window,(800 , 55),'0',textColor = WHITE,fontSize = 50)
-##cityPowerDemand = pygwidgets.DisplayText(window,(600 , 45), powerDemand, textColor = BLACK , fontSize = 50)
-##
-###Game inventory
-##numberOfGenerators1 = 0
-##numberOfGenerators2 = 0
-##numberOfGenerators3 = 0
-##
-###Demand of city
-  
+#def gameLevel1():
+#Buttons to buy generators
+buyGenerator1 = pygwidgets.TextButton(window, (45, 655), 'Buy a generator 1')
+buyGenerator2 = pygwidgets.TextButton(window, (250, 655), 'Buy a generator 2')
+buyGenerator3 = pygwidgets.TextButton(window, (460, 655), 'Buy a generator 3')
+
+#Display game data
+numberOfGen1Display = pygwidgets.DisplayText(window,(400 , 45),'0',textColor = WHITE,fontSize = 50)
+numberOfGen2Display = pygwidgets.DisplayText(window,(700 , 45),'0',textColor = WHITE,fontSize = 50)
+numberOfGen3Display = pygwidgets.DisplayText(window,(800 , 55),'0',textColor = WHITE,fontSize = 50)
+cityPowerDemand = pygwidgets.DisplayText(window,(600 , 45), '1', textColor = WHITE , fontSize = 50)
+
+#Game inventory
+numberOfGenerators1 = 0
+numberOfGenerators2 = 0
+numberOfGenerators3 = 0
+
+#Demand of city
+cityPowerDemand1 = 45
+    
 
 
 
@@ -202,6 +202,7 @@ def gameLevel2():
     numberOfGenerators3 = 0
 
     #Demand of city
+    cityPowerDemand1 = 45
 
     myDisplay = pygame.display.set_mode((1280 ,720))
 
@@ -218,36 +219,19 @@ numberOfGenerators1 = 0
 numberOfGenerators2 = 0
 numberOfGenerators3 = 0
 
-
-def PowerDemand():
-    if state == 0:
-        powerDemand = 0
-    if state == 1:
-        powerDemand = 100
-    if state == 2:
-        powerDemand = 200
-    return powerDemand
-
-
-
+#Demand of City
+cityPowerDemand1 = 33
+cityPowerDemand2 = 66
+cityPowerDemand3 = 100
+#Display game data
 numberOfGen1Display = pygwidgets.DisplayText(window,(340 , 45),'0',textColor = WHITE,fontSize = 50)
 numberOfGen2Display = pygwidgets.DisplayText(window,(420 , 45),'0',textColor = WHITE,fontSize = 50)
 numberOfGen3Display = pygwidgets.DisplayText(window,(500 , 45),'0',textColor = WHITE,fontSize = 50)
-cityPowerDemand = pygwidgets.DisplayText(window,(100 , 45), PowerDemand(), textColor = WHITE , fontSize = 50)
-totalPowerDisplay = pygwidgets.DisplayText(window,(950 , 45), totalPower, textColor = BLACK , fontSize = 50)
+cityPowerDemand = pygwidgets.DisplayText(window,(100 , 45), cityPowerDemand3, textColor = WHITE , fontSize = 50)
+totalPower = pygwidgets.DisplayText(window,(1000 , 45), '0', textColor = BLACK , fontSize = 50)
 
 
-
-city1no = pygame.image.load('PowerImages/CityPic/city1NoPower.jpg')
-city1Med = pygame.image.load('PowerImages/CityPic/city1MedPower.jpg')
 while True:
-#powerDemand = 100
-#Display game data
-    
-    
-
-
-
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             pygame.quit()
@@ -270,8 +254,6 @@ while True:
                     print("Max gen owned")
                 else:
                     numberOfGenerators1 = numberOfGenerators1 + 1
-                    totalPower = totalPower + 15
-                    totalPowerDisplay.setValue(totalPower)
                     numberOfGen1Display.setValue(numberOfGenerators1)
                 
 
@@ -289,7 +271,7 @@ while True:
                     print("Maxed gen owned")
                 else:
                     numberOfGenerators3 = numberOfGenerators3 + 1
-                    numberOfGen3DisplaytotalPower.setValue(numberOfGenerators3)
+                    numberOfGen3Display.setValue(numberOfGenerators3)
         elif state == 2:
             if buyGenerator1.handleEvent(event):
                 print("Gen button clicked # is" , numberOfGenerators1)
@@ -322,7 +304,7 @@ while True:
 
 #start screen                
     if state == 0:
-        
+
 
         
 
@@ -339,24 +321,10 @@ while True:
 
 #level 1 screen
     elif state == 1:
-        if totalPower >= PowerDemand():
-            print('done')
+        
+        
 
-        
-        
-            
-            
-            
-        
-        
-        
-        
-        
-        
-        
-        
         window.blit(backGroundImage, (0, 0))
-        cityPowerDemand.setValue(totalPower)
         buyGenerator1.draw()
         buyGenerator2.draw()
         buyGenerator3.draw()
@@ -364,10 +332,9 @@ while True:
         numberOfGen2Display.draw()
         numberOfGen3Display.draw()
         cityPowerDemand.draw()
-        totalPowerDisplay.draw()
+
         pygame.display.update()
         clock.tick(FRAMES_PER_SECOND)
-        
             
 
         
@@ -383,7 +350,7 @@ while True:
 #level 2 screen
     if state == 2:
 
-        if totalPowerOutput == cityPowerDemand:
+        if totalPowerOutput == cityPowerDemand1:
             print("You passed!")
             wonGameScreen()#Calling function that does not exist 
         
@@ -398,7 +365,8 @@ while True:
         cityPowerDemand.draw()
         
 
-        
+        pygame.display.update()
+        clock.tick(FRAMES_PER_SECOND)
 #level 3 screen
     if state == 3:
         

@@ -47,16 +47,18 @@ pygame.mixer.music.play(0)
 
 #--------loading Images-----------
 backGroundImage = pygame.image.load("images/background.jpg")
-
+city1assets = [pygame.image.load('PowerImages/CityPic/city1MaxPower'),pygame.image.load('PowerImages/CityPic/city1MedPower')]
+city2assets = [pygame.image.load('PowerImages/CityPic/city2MaxPower'),pygame.image.load('PowerImages/CityPic/city2MedPower')
+city3assets = [pygame.image.load('PowerImages/CityPic/lasVegasMaxPower'),pygame.image.load('PowerImages/CityPic/lasVegasMedPower')
 #-------End Loading Images--------
 
 #----------Counters---------------
 generatorCounter1 = 0
 generatorCounter2 = 0
 generatorCounter3 = 0
-
+totalPower = 0
 brokenGeneratorCounter = 0
-
+animationCount = 0
 #---------End Counters------------
 
 
@@ -106,7 +108,9 @@ def wonGameScreen():
         clock.tick(FRAMES_PER_SECOND)
 
 
-
+def animation():
+    global 
+    
 
 
 def startMenu():
