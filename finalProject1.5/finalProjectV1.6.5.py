@@ -27,10 +27,12 @@ window = pygame.display.set_mode([WINDOW_WIDTH, WINDOW_HEIGHT])
 clock = pygame.time.Clock()
 
 
-#Load Image
+#Load Image/assets
 startMenu = pygame.image.load("menuPlaceHolderGame.jpg")
 backGroundImage = pygame.image.load("images/background.jpg")
-
+city1ImageList = [pygame.image.load("PowerImages/CityPic/city1NoPower"),pygame.image.load("PowerImages/CityPic/city1MedPower"),pygame.image.load("PowerImages/CityPic/city1MaxPower")]
+city2ImageList = [pygame.image.load("PowerImages/CityPic/city2NoPower"),pygame.image.load("PowerImages/CityPic/city2MedPower"),pygame.image.load("PowerImages/CityPic/city2MaxPower")]
+cIty3ImageList = [pygame.image.load("PowerImages/CityPic/lasVegasNoPower",pygame.image.load("PowerImages/CityPic/lasVegasMedPower",pygame.image.load("PowerImages/CityPic/lasVegasMaxPower")]
 
 
 #Levels
@@ -142,9 +144,11 @@ while True:
 
 
             totalPowerOutput = (numberOfGenerators1) + (numberOfGenerators2 * 4) + (numberOfGenerators3 * 8)
-            
 
-            '''if totalPowerOutput >= 5:
+            #in range(0,201):
+
+
+            if totalPowerOutput >= 5:
                 totalPowerOutput = totalPowerOutput - removeRandomAmount
             elif totalPowerOutput >= 10:
                 totalPowerOutput = totalPowerOutput - removeRandomAmount
@@ -223,7 +227,7 @@ while True:
             elif totalPowerOutput >= 195:
                 totalPowerOutput = totalPowerOutput - removeRandomAmount
             elif totalPowerOutput >= 200:
-                totalPowerOutput = totalPowerOutput - removeRandomAmount'''
+                totalPowerOutput = totalPowerOutput - removeRandomAmount
  
 
             totalPowerOutputDisplay.setValue(totalPowerOutput)
