@@ -55,7 +55,7 @@ numberOfGen2Display = pygwidgets.DisplayText(window,(430 , 45),'0',textColor = W
 numberOfGen3Display = pygwidgets.DisplayText(window,(510 , 45),'0',textColor = WHITE,fontSize = 50)
 totalPowerOutputDisplay = pygwidgets.DisplayText(window,(1000 , 45),'0',textColor = WHITE,fontSize = 50)
 playerMoneyDisplay = pygwidgets.DisplayText(window,(750 , 45),'0',textColor = WHITE,fontSize = 50)
-
+cityPowerDemandDisplay = pygwidgets.DisplayText(window,(65 , 45),'0',textColor = WHITE,fontSize = 50)
 
 #Images chcange
 #cityImage = pygwidgets.ImageCollection(window, (100, 200),\
@@ -105,6 +105,8 @@ while True:
 
     elif state == LEVEL_ONE or state == LEVEL_TWO or state == LEVEL_THREE:
         if state == LEVEL_ONE:
+            cityPowerDemand = 250
+            cityPowerDemandDisplay.setValue(cityPowerDemand)
             for event in pygame.event.get():
                 if event.type == pygame.QUIT:
                     pygame.quit()
@@ -113,13 +115,10 @@ while True:
                 if playerMoney == 0:
                     buyGenerator2.disable()
                     buyGenerator3.disable()
-                else:
+                elif playerMoney == 50:
                     buyGenerator2.enable()
+                elif playerMoney == 100:
                     buyGenerator3.enable()
-                    
-                    
-
-
 
                     
                 if buyGenerator1.handleEvent(event):
@@ -153,17 +152,18 @@ while True:
             totalPowerOutput = (numberOfGenerators1) + (numberOfGenerators2 * 5) + (numberOfGenerators3 * 10)
 
             if totalPowerOutput == 15:
-                playerMoney = playerMoney + 30
+                playerMoney = playerMoney + 2
             elif totalPowerOutput == 30:
-                playerMoney = playerMoney + 60
+                playerMoney = playerMoney + 4
 
-
-
-            playerMoney = playerMoney - 100 * numberOfGenerators1
-
-
-
+#----------------------------------------------------------------------
+            if numberOfGenerators1 >= 10:
+                playerMoney = playerMoney - 1
             
+#----------------------------------------------------------------------
+            
+
+          
             if totalPowerOutput >= 5:
                 totalPowerOutput = totalPowerOutput - removeRandomAmount
             elif totalPowerOutput >= 10:
@@ -187,6 +187,8 @@ while True:
             numberOfGen1Display.draw()
             numberOfGen2Display.draw()
             numberOfGen3Display.draw()
+
+            cityPowerDemandDisplay.draw()
 
             totalPowerOutputDisplay.draw()
             playerMoneyDisplay.draw()
