@@ -53,10 +53,9 @@ buyGenerator3 = pygwidgets.TextButton(window, (460, 655), 'Buy a generator 3')
 numberOfGen1Display = pygwidgets.DisplayText(window,(350 , 45),'0',textColor = WHITE,fontSize = 50)
 numberOfGen2Display = pygwidgets.DisplayText(window,(430 , 45),'0',textColor = WHITE,fontSize = 50)
 numberOfGen3Display = pygwidgets.DisplayText(window,(510 , 45),'0',textColor = WHITE,fontSize = 50)
-
 totalPowerOutputDisplay = pygwidgets.DisplayText(window,(1000 , 45),'0',textColor = WHITE,fontSize = 50)
+playerMoneyDisplay = pygwidgets.DisplayText(window,(750 , 45),'0',textColor = WHITE,fontSize = 50)
 
-playerMoneyDisplay = pygwidgets.DisplayText(window,(800 , 45),'0',textColor = WHITE,fontSize = 50)
 
 #Images chcange
 #cityImage = pygwidgets.ImageCollection(window, (100, 200),\
@@ -71,6 +70,8 @@ numberOfGenerators3 = 0
 
 playerMoney = 0 
 
+#Random numbers
+removeRandomAmount = random.randrange(0,10)
 
 
 
@@ -113,7 +114,10 @@ while True:
                     else:
                         numberOfGenerators1 = numberOfGenerators1 + 1
                         numberOfGen1Display.setValue(numberOfGenerators1)
-
+                        playerMoney = playerMoney - 1
+                        print(playerMoney)
+                        
+                
                 if buyGenerator2.handleEvent(event):
                     print("Gen2 button clicked")
                     if numberOfGenerators2 >=15:
@@ -121,18 +125,30 @@ while True:
                     else:
                         numberOfGenerators2 = numberOfGenerators2 + 1
                         numberOfGen2Display.setValue(numberOfGenerators2)
+                        
 
                 if buyGenerator3.handleEvent(event):
                     print("Gen3 button clicked")
                     if numberOfGenerators3 >=15:
                         print("Maxed gen owned")
-                    else:
+                    else: 
                         numberOfGenerators3 = numberOfGenerators3 + 1
                         numberOfGen3Display.setValue(numberOfGenerators3)
 
 
             totalPowerOutput = (numberOfGenerators1) + (numberOfGenerators2 * 5) + (numberOfGenerators3 * 10)
+
+            if totalPowerOutput >= 15:
+                totalPowerOutput = totalPowerOutput - removeRandomAmount
+            elif totalPowerOutput >= 20:
+                totalPowerOutput = totalPowerOutput - removeRandomAmount
+            
             totalPowerOutputDisplay.setValue(totalPowerOutput)
+
+            playerMoneyDisplay.setValue(playerMoney)
+
+            if totalPowerOutput == 200:
+                print('You passed')
 
             
             window.blit(backGroundImage,(0,0))
@@ -145,6 +161,7 @@ while True:
             numberOfGen3Display.draw()
 
             totalPowerOutputDisplay.draw()
+            playerMoneyDisplay.draw()
 
 
 
