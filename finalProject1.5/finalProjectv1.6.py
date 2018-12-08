@@ -300,7 +300,7 @@ while True:
             
 
                 
-    if state == 0: #Wrong
+
 
 #start screen                
     if state == 0:
@@ -317,7 +317,7 @@ while True:
             
 
 
-    elif state == 1: #Wrong
+
 
 #level 1 screen
     elif state == 1:
@@ -346,7 +346,6 @@ while True:
     
 
 
-    if state == 2: #Wrong already used.
 
 #level 2 screen
     if state == 2:
