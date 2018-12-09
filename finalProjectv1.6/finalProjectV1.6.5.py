@@ -115,14 +115,7 @@ while True:
                     pygame.quit()
                     sys.exit()
 
-                if playerMoney == 0:
-                    buyGenerator2.disable()
-                    buyGenerator3.disable()
-                elif playerMoney == 50:
-                    buyGenerator2.enable()
-                    
-                elif playerMoney == 100:
-                    buyGenerator3.enable()
+                
                     
 
                     
@@ -158,6 +151,8 @@ while True:
 
             if totalPowerOutput == 15:
                 playerMoney = playerMoney + 2
+            elif totalPowerOutput == 25:
+                plyaerMoney = playerMoney + 5
             elif totalPowerOutput == 30:
                 playerMoney = playerMoney + 4
 
@@ -190,6 +185,17 @@ while True:
 
             if totalPowerOutput == 300:
                 print('You passed')
+
+
+
+
+            if playerMoney == 0:
+                buyGenerator2.disable()
+                buyGenerator3.disable()
+            elif(playerMoney >= 50) and (playerMoney <=100):
+                buyGenerator2.enable()
+            elif playerMoney == 100:
+                buyGenerator3.enable()
 
             
             window.blit(backGroundImage,(0,0))
