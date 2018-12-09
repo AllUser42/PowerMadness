@@ -80,7 +80,7 @@ playerMoney = 0
 
 
 state = START
-
+ 
 #Main loop
 
 while True:
