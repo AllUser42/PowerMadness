@@ -120,8 +120,10 @@ while True:
                     buyGenerator3.disable()
                 elif playerMoney == 50:
                     buyGenerator2.enable()
+                    
                 elif playerMoney == 100:
                     buyGenerator3.enable()
+                    
 
                     
                 if buyGenerator1.handleEvent(event):
@@ -166,7 +168,7 @@ while True:
 #----------------------------------------------------------------------
             
 
-          
+            
             if totalPowerOutput >= 5:
                 totalPowerOutput = totalPowerOutput - removeRandomAmount
             elif totalPowerOutput >= 10:
@@ -175,8 +177,16 @@ while True:
                 totalPowerOutput = totalPowerOutput - removeRandomAmount
             
             totalPowerOutputDisplay.setValue(totalPowerOutput)
-
             playerMoneyDisplay.setValue(playerMoney)
+
+            if totalPowerOutput <= 40:
+                cityOneImage.show('cityOnePowerLevelOne')
+            elif totalPowerOutput == 150:
+                cityOneImage.show('cityOnePowerLevelTwo')
+            elif totalPowerOutput == 200:
+                cityOneImage.show('cityOnePowerLevelThree')
+                
+            
 
             if totalPowerOutput == 300:
                 print('You passed')
@@ -190,6 +200,8 @@ while True:
             numberOfGen1Display.draw()
             numberOfGen2Display.draw()
             numberOfGen3Display.draw()
+
+            cityOneImage.draw()
 
             cityPowerDemandDisplay.draw()
 
