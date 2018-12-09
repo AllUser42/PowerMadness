@@ -4,6 +4,7 @@ from pygame.locals import*
 import random
 import sys
 import pygwidgets
+import pyghelpers
 
 #Window settings
 WINDOW_WIDTH = 1280
@@ -27,24 +28,10 @@ window = pygame.display.set_mode([WINDOW_WIDTH, WINDOW_HEIGHT])
 clock = pygame.time.Clock()
 
 
-#Load Image/assets
+#Load Image
 startMenu = pygame.image.load("menuPlaceHolderGame.jpg")
 backGroundImage = pygame.image.load("images/background.jpg")
-city1ImageList = [pygame.image.load("PowerImages/CityPic/city1NoPower.jpg"),pygame.image.load("PowerImages/CityPic/city1MedPower.jpg"),pygame.image.load("PowerImages/CityPic/city1MaxPower.jpg")]
-##city2ImageList = [pygame.image.load("PowerImages/CityPic/city2NoPower"),pygame.image.load("PowerImages/CityPic/city2MedPower"),pygame.image.load("PowerImages/CityPic/city2MaxPower")]
-##cIty3ImageList = [pygame.image.load("PowerImages/CityPic/lasVegasNoPower",pygame.image.load("PowerImages/CityPic/lasVegasMedPower",pygame.image.load("PowerImages/CityPic/lasVegasMaxPower")]
 
-pygame.mixer.music.load('music/music1.mp3')
-pygame.mixer.music.play(-1)
-
-def sound():
-    effect = pygame.mixer.Sound('sounds/bonus.wav')
-    effect.play()
-
-
-def sound2():
-    effect = pygame.mixer.Sound('sounds/Nextbutton.wav')
-    effect.play()
 
 
 #Levels
@@ -69,11 +56,37 @@ numberOfGen2Display = pygwidgets.DisplayText(window,(430 , 45),'0',textColor = W
 numberOfGen3Display = pygwidgets.DisplayText(window,(510 , 45),'0',textColor = WHITE,fontSize = 50)
 totalPowerOutputDisplay = pygwidgets.DisplayText(window,(1000 , 45),'0',textColor = WHITE,fontSize = 50)
 playerMoneyDisplay = pygwidgets.DisplayText(window,(750 , 45),'0',textColor = WHITE,fontSize = 50)
-
+cityPowerDemandDisplay = pygwidgets.DisplayText(window,(65 , 45),'0',textColor = WHITE,fontSize = 50)
 
 #Images chcange
-#cityImage = pygwidgets.ImageCollection(window, (100, 200),\
-                                     #{‘image1’:’images/SomeImage.png’, ‘image2’:’images/Image2.png’, ‘image3’:’images/Image3.png’}, ‘image1’)
+cityOneImage = pygwidgets.ImageCollection(window, (585,174),\
+                                     {'cityOnePowerLevelOne':'cityImages/city1NoPower.jpg', \
+                                      'cityOnePowerLevelTwo':'cityImages/city1MedPower.jpg', \
+                                      'cityOnePowerLevelThree':'cityImages/city1MaxPower.jpg'},'cityOnePowerLevelOne')
+
+
+pygame.mixer.music.load('music/music1.mp3')
+pygame.mixer.music.set_volume(0.5)
+pygame.mixer.music.play(-1)
+
+
+
+def sound():
+    effect = pygame.mixer.Sound('sounds/bonus.wav')
+    effect.play()
+
+
+def sound2():
+    effect = pygame.mixer.Sound('sounds/Nextbutton.wav')
+    effect.play()
+
+
+
+
+
+
+
+
 
 
 
@@ -85,21 +98,19 @@ numberOfGenerators3 = 0
 playerMoney = 0 
 
 #Random numbers
-
-
+#removeRandomAmount = random.randrange(0,10)
 
 
 
 
 state = START
-
+ 
 #Main loop
 
 while True:
 
     removeRandomAmount = random.randrange(0,10)
-
-    
+     
     if state == START:
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
@@ -107,8 +118,6 @@ while True:
                 sys.exit()
             if startGame.handleEvent(event):
                 print('start game')
-                sound2()
-                pygame.mixer.music.play()
                 state = LEVEL_ONE
             
 
@@ -123,210 +132,109 @@ while True:
 
     elif state == LEVEL_ONE or state == LEVEL_TWO or state == LEVEL_THREE:
         if state == LEVEL_ONE:
+            cityPowerDemand = 250
+            cityPowerDemandDisplay.setValue(cityPowerDemand)
             for event in pygame.event.get():
                 if event.type == pygame.QUIT:
                     pygame.quit()
                     sys.exit()
+
+                if playerMoney == 0:
+                    buyGenerator2.disable()
+                    buyGenerator3.disable()
+                elif playerMoney == 50:
+                    buyGenerator2.enable()
+                    
+                elif playerMoney == 100:
+                    buyGenerator3.enable()
+                    
+
                     
                 if buyGenerator1.handleEvent(event):
                     print("Gen button clicked # is" , numberOfGenerators1)
                     if numberOfGenerators1 >= 15:
-                        sound2()
                         print("Max gen owned")
                     else:
-                        sound()
                         numberOfGenerators1 = numberOfGenerators1 + 1
                         numberOfGen1Display.setValue(numberOfGenerators1)
-                        playerMoney = playerMoney - 1
-                        print(playerMoney)
                         
                 
                 if buyGenerator2.handleEvent(event):
                     print("Gen2 button clicked")
                     if numberOfGenerators2 >=15:
-                        sound2()
                         print("Maxed gen owned")
                     else:
-                        sound()
                         numberOfGenerators2 = numberOfGenerators2 + 1
                         numberOfGen2Display.setValue(numberOfGenerators2)
+                        playerMoney = playerMoney - 50
                         
 
                 if buyGenerator3.handleEvent(event):
                     print("Gen3 button clicked")
                     if numberOfGenerators3 >=15:
-                        sound2()
                         print("Maxed gen owned")
-                    else:
-                        sound()
+                    else: 
                         numberOfGenerators3 = numberOfGenerators3 + 1
                         numberOfGen3Display.setValue(numberOfGenerators3)
 
 
-            totalPowerOutput = (numberOfGenerators1) + (numberOfGenerators2 * 4) + (numberOfGenerators3 * 8)
+            totalPowerOutput = (numberOfGenerators1) + (numberOfGenerators2 * 5) + (numberOfGenerators3 * 10)
 
-            #in range(0,201):
+            if totalPowerOutput == 15:
+                playerMoney = playerMoney + 2
+            elif totalPowerOutput == 30:
+                playerMoney = playerMoney + 4
 
+#----------------------------------------------------------------------
+            if numberOfGenerators1 >= 10:
+                playerMoney = playerMoney - 1
+            
+#----------------------------------------------------------------------
+            
 
+            
             if totalPowerOutput >= 5:
                 totalPowerOutput = totalPowerOutput - removeRandomAmount
             elif totalPowerOutput >= 10:
                 totalPowerOutput = totalPowerOutput - removeRandomAmount
             elif totalPowerOutput >= 15:
                 totalPowerOutput = totalPowerOutput - removeRandomAmount
-            elif totalPowerOutput >= 20:
-                totalPowerOutput = totalPowerOutput - removeRandomAmount
-            elif totalPowerOutput >= 25:
-                totalPowerOutput = totalPowerOutput - removeRandomAmount
-            elif totalPowerOutput >= 30:
-                totalPowerOutput = totalPowerOutput - removeRandomAmount
-            elif totalPowerOutput >= 35:
-                totalPowerOutput = totalPowerOutput - removeRandomAmount
-            elif totalPowerOutput >= 40:
-                totalPowerOutput = totalPowerOutput - removeRandomAmount
-            elif totalPowerOutput >= 45:
-                totalPowerOutput = totalPowerOutput - removeRandomAmount
-            elif totalPowerOutput >= 50:
-                totalPowerOutput = totalPowerOutput - removeRandomAmount
-            elif totalPowerOutput >= 55:
-                totalPowerOutput = totalPowerOutput - removeRandomAmount
-            elif totalPowerOutput >= 60:
-                totalPowerOutput = totalPowerOutput - removeRandomAmount
-            elif totalPowerOutput >= 65:
-                totalPowerOutput = totalPowerOutput - removeRandomAmount
-            elif totalPowerOutput >= 70:
-                totalPowerOutput = totalPowerOutput - removeRandomAmount
-            elif totalPowerOutput >= 75:
-                totalPowerOutput = totalPowerOutput - removeRandomAmount
-            elif totalPowerOutput >= 80:
-                totalPowerOutput = totalPowerOutput - removeRandomAmount
-            elif totalPowerOutput >= 85:
-                totalPowerOutput = totalPowerOutput - removeRandomAmount
-            elif totalPowerOutput >= 90:
-                totalPowerOutput = totalPowerOutput - removeRandomAmount
-            elif totalPowerOutput >= 95:
-                totalPowerOutput = totalPowerOutput - removeRandomAmount
-            elif totalPowerOutput >= 100:
-                totalPowerOutput = totalPowerOutput - removeRandomAmount
-            elif totalPowerOutput >= 105:
-                totalPowerOutput = totalPowerOutput - removeRandomAmount
-            elif totalPowerOutput >= 110:
-                totalPowerOutput = totalPowerOutput - removeRandomAmount
-            elif totalPowerOutput >= 115:
-                totalPowerOutput = totalPowerOutput - removeRandomAmount
-            elif totalPowerOutput >= 120:
-                totalPowerOutput = totalPowerOutput - removeRandomAmount
-            elif totalPowerOutput >= 125:
-                totalPowerOutput = totalPowerOutput - removeRandomAmount
-            elif totalPowerOutput >= 130:
-                totalPowerOutput = totalPowerOutput - removeRandomAmount
-            elif totalPowerOutput >= 135:
-                totalPowerOutput = totalPowerOutput - removeRandomAmount
-            elif totalPowerOutput >= 140:
-                totalPowerOutput = totalPowerOutput - removeRandomAmount
-            elif totalPowerOutput >= 145:
-                totalPowerOutput = totalPowerOutput - removeRandomAmount
-            elif totalPowerOutput >= 150:
-                totalPowerOutput = totalPowerOutput - removeRandomAmount
-            elif totalPowerOutput >= 155:
-                totalPowerOutput = totalPowerOutput - removeRandomAmount
-            elif totalPowerOutput >= 160:
-                totalPowerOutput = totalPowerOutput - removeRandomAmount
-            elif totalPowerOutput >= 165:
-                totalPowerOutput = totalPowerOutput - removeRandomAmount
-            elif totalPowerOutput >= 170:
-                totalPowerOutput = totalPowerOutput - removeRandomAmount
-            elif totalPowerOutput >= 175:
-                totalPowerOutput = totalPowerOutput - removeRandomAmount
-            elif totalPowerOutput >= 180:
-                totalPowerOutput = totalPowerOutput - removeRandomAmount
-            elif totalPowerOutput >= 185:
-                totalPowerOutput = totalPowerOutput - removeRandomAmount
-            elif totalPowerOutput >= 190:
-                totalPowerOutput = totalPowerOutput - removeRandomAmount
-            elif totalPowerOutput >= 195:
-                totalPowerOutput = totalPowerOutput - removeRandomAmount
-            elif totalPowerOutput >= 200:
-                totalPowerOutput = totalPowerOutput - removeRandomAmount
- 
-
+            
             totalPowerOutputDisplay.setValue(totalPowerOutput)
-
             playerMoneyDisplay.setValue(playerMoney)
 
-            if totalPowerOutput == 200:
+            if totalPowerOutput <= 40:
+                cityOneImage.show('cityOnePowerLevelOne')
+            elif totalPowerOutput == 150:
+                cityOneImage.show('cityOnePowerLevelTwo')
+            elif totalPowerOutput == 200:
+                cityOneImage.show('cityOnePowerLevelThree')
+                
+            
+
+            if totalPowerOutput == 300:
                 print('You passed')
 
-            if totalPowerOutput >= 0:
-                
-
             
-                window.blit(backGroundImage,(0,0))
-                window.blit(city1ImageList[0],(585,174))
-                buyGenerator1.draw()
-                buyGenerator2.draw()
-                buyGenerator3.draw()
-                
-                numberOfGen1Display.draw()
-                numberOfGen2Display.draw()
-                numberOfGen3Display.draw()
-
-                totalPowerOutputDisplay.draw()
-                playerMoneyDisplay.draw()
-
-
-
-                pygame.display.update()
-                clock.tick(FRAMES_PER_SECOND)
-
-            if totalPowerOutput >= 20:
-                
-
+            window.blit(backGroundImage,(0,0))
+            buyGenerator1.draw()
+            buyGenerator2.draw()
+            buyGenerator3.draw()
             
-                window.blit(backGroundImage,(0,0))
-                window.blit(city1ImageList[1],(585,174))
-                buyGenerator1.draw()
-                buyGenerator2.draw()
-                buyGenerator3.draw()
-                
-                numberOfGen1Display.draw()
-                numberOfGen2Display.draw()
-                numberOfGen3Display.draw()
+            numberOfGen1Display.draw()
+            numberOfGen2Display.draw()
+            numberOfGen3Display.draw()
 
-                totalPowerOutputDisplay.draw()
-                playerMoneyDisplay.draw()
+            cityOneImage.draw()
+
+            cityPowerDemandDisplay.draw()
+
+            totalPowerOutputDisplay.draw()
+            playerMoneyDisplay.draw()
 
 
 
-                pygame.display.update()
-                clock.tick(FRAMES_PER_SECOND)
-
-
-            if totalPowerOutput >= 70:
-                
-
-            
-                window.blit(backGroundImage,(0,0))
-                window.blit(city1ImageList[2],(585,174))
-                buyGenerator1.draw()
-                buyGenerator2.draw()
-                buyGenerator3.draw()
-                
-                numberOfGen1Display.draw()
-                numberOfGen2Display.draw()
-                numberOfGen3Display.draw()
-
-                totalPowerOutputDisplay.draw()
-                playerMoneyDisplay.draw()
-
-
-
-                pygame.display.update()
-                clock.tick(FRAMES_PER_SECOND)
-
-
-            
-
-            
+            pygame.display.update()
+            clock.tick(FRAMES_PER_SECOND)
         
                 
