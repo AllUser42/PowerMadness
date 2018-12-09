@@ -218,5 +218,123 @@ while True:
 
             pygame.display.update()
             clock.tick(FRAMES_PER_SECOND)
+
+
+
+
+#----------------Level two--------------------------------------------------------------------------
+
+            if state == LEVEL_TWO:
+                cityPowerDemand = 250
+                cityPowerDemandDisplay.setValue(cityPowerDemand)
+                print('level 2')
+                for event in pygame.event.get():
+                    if event.type == pygame.QUIT:
+                        pygame.quit()
+                        sys.exit()
+
+                    
+                        
+
+                        
+                    if buyGenerator1.handleEvent(event):
+                        print("Gen button clicked # is" , numberOfGenerators1)
+                        if numberOfGenerators1 >= 15:
+                            print("Max gen owned")
+                        else:
+                            numberOfGenerators1 = numberOfGenerators1 + 1
+                            numberOfGen1Display.setValue(numberOfGenerators1)
+                            
+                    
+                    if buyGenerator2.handleEvent(event):
+                        print("Gen2 button clicked")
+                        if numberOfGenerators2 >=15:
+                            print("Maxed gen owned")
+                        else:
+                            numberOfGenerators2 = numberOfGenerators2 + 1
+                            numberOfGen2Display.setValue(numberOfGenerators2)
+                            playerMoney = playerMoney - 50
+                            
+
+                    if buyGenerator3.handleEvent(event):
+                        print("Gen3 button clicked")
+                        if numberOfGenerators3 >=15:
+                            print("Maxed gen owned")
+                        else: 
+                            numberOfGenerators3 = numberOfGenerators3 + 1
+                            numberOfGen3Display.setValue(numberOfGenerators3)
+
+
+                totalPowerOutput = (numberOfGenerators1) + (numberOfGenerators2 * 5) + (numberOfGenerators3 * 10)
+
+                if totalPowerOutput == 15:
+                    playerMoney = playerMoney + 2
+                elif totalPowerOutput == 25:
+                    plyaerMoney = playerMoney + 5
+                elif totalPowerOutput == 30:
+                    playerMoney = playerMoney + 4
+
+    #----------------------------------------------------------------------
+                if numberOfGenerators1 >= 10:
+                    playerMoney = playerMoney - 1
+                
+    #----------------------------------------------------------------------
+                
+
+                
+                if totalPowerOutput >= 5:
+                    totalPowerOutput = totalPowerOutput - removeRandomAmount
+                elif totalPowerOutput >= 10:
+                    totalPowerOutput = totalPowerOutput - removeRandomAmount
+                elif totalPowerOutput >= 15:
+                    totalPowerOutput = totalPowerOutput - removeRandomAmount
+                
+                totalPowerOutputDisplay.setValue(totalPowerOutput)
+                playerMoneyDisplay.setValue(playerMoney)
+
+                if totalPowerOutput <= 40:
+                    cityOneImage.show('cityOnePowerLevelOne')
+                elif totalPowerOutput == 150:
+                    cityOneImage.show('cityOnePowerLevelTwo')
+                elif totalPowerOutput == 200:
+                    cityOneImage.show('cityOnePowerLevelThree')
+                    
+                
+
+                if totalPowerOutput == 300:
+                    print('You passed')
+
+
+
+
+                if playerMoney == 0:
+                    buyGenerator2.disable()
+                    buyGenerator3.disable()
+                elif(playerMoney >= 50) and (playerMoney <=100):
+                    buyGenerator2.enable()
+                elif playerMoney == 100:
+                    buyGenerator3.enable()
+
+                
+                window.blit(backGroundImage,(0,0))
+                buyGenerator1.draw()
+                buyGenerator2.draw()
+                buyGenerator3.draw()
+                
+                numberOfGen1Display.draw()
+                numberOfGen2Display.draw()
+                numberOfGen3Display.draw()
+
+                cityOneImage.draw()
+
+                cityPowerDemandDisplay.draw()
+
+                totalPowerOutputDisplay.draw()
+                playerMoneyDisplay.draw()
+
+
+
+                pygame.display.update()
+                clock.tick(FRAMES_PER_SECOND)
         
                 
