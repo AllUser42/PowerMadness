@@ -4,6 +4,7 @@ from pygame.locals import*
 import random
 import sys
 import pygwidgets
+import pyghelpers
 
 #Window settings
 WINDOW_WIDTH = 1280
@@ -58,8 +59,10 @@ playerMoneyDisplay = pygwidgets.DisplayText(window,(750 , 45),'0',textColor = WH
 cityPowerDemandDisplay = pygwidgets.DisplayText(window,(65 , 45),'0',textColor = WHITE,fontSize = 50)
 
 #Images chcange
-#cityImage = pygwidgets.ImageCollection(window, (100, 200),\
-                                     #{‘image1’:’images/SomeImage.png’, ‘image2’:’images/Image2.png’, ‘image3’:’images/Image3.png’}, ‘image1’)
+cityOneImage = pygwidgets.ImageCollection(window, (585,174),\
+                                     {'cityOnePowerLevelOne':'cityImages/city1NoPower.jpg', \
+                                      'cityOnePowerLevelTwo':'cityImages/city1MedPower.jpg', \
+                                      'cityOnePowerLevelThree':'cityImages/city1MaxPower.jpg'},'cityOnePowerLevelOne')
 
 
 
