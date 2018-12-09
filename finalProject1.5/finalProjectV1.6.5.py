@@ -38,9 +38,13 @@ pygame.mixer.music.load('music/music1.mp3')
 pygame.mixer.music.play(-1)
 
 def sound():
-    effect = pygame.mixer.Sound('sounds/Coin.wav')
+    effect = pygame.mixer.Sound('sounds/bonus.wav')
     effect.play()
 
+
+def sound2():
+    effect = pygame.mixer.Sound('sounds/Nextbutton.wav')
+    effect.play()
 
 
 #Levels
@@ -103,7 +107,7 @@ while True:
                 sys.exit()
             if startGame.handleEvent(event):
                 print('start game')
-                sound()
+                sound2()
                 pygame.mixer.music.play()
                 state = LEVEL_ONE
             
@@ -127,6 +131,7 @@ while True:
                 if buyGenerator1.handleEvent(event):
                     print("Gen button clicked # is" , numberOfGenerators1)
                     if numberOfGenerators1 >= 15:
+                        sound2()
                         print("Max gen owned")
                     else:
                         sound()
@@ -139,6 +144,7 @@ while True:
                 if buyGenerator2.handleEvent(event):
                     print("Gen2 button clicked")
                     if numberOfGenerators2 >=15:
+                        sound2()
                         print("Maxed gen owned")
                     else:
                         sound()
@@ -149,6 +155,7 @@ while True:
                 if buyGenerator3.handleEvent(event):
                     print("Gen3 button clicked")
                     if numberOfGenerators3 >=15:
+                        sound2()
                         print("Maxed gen owned")
                     else:
                         sound()
