@@ -30,9 +30,17 @@ clock = pygame.time.Clock()
 #Load Image/assets
 startMenu = pygame.image.load("menuPlaceHolderGame.jpg")
 backGroundImage = pygame.image.load("images/background.jpg")
-city1ImageList = [pygame.image.load("PowerImages/CityPic/city1NoPower"),pygame.image.load("PowerImages/CityPic/city1MedPower"),pygame.image.load("PowerImages/CityPic/city1MaxPower")]
-city2ImageList = [pygame.image.load("PowerImages/CityPic/city2NoPower"),pygame.image.load("PowerImages/CityPic/city2MedPower"),pygame.image.load("PowerImages/CityPic/city2MaxPower")]
-cIty3ImageList = [pygame.image.load("PowerImages/CityPic/lasVegasNoPower",pygame.image.load("PowerImages/CityPic/lasVegasMedPower",pygame.image.load("PowerImages/CityPic/lasVegasMaxPower")]
+##city1ImageList = [pygame.image.load("PowerImages/CityPic/city1NoPower"),pygame.image.load("PowerImages/CityPic/city1MedPower"),pygame.image.load("PowerImages/CityPic/city1MaxPower")]
+##city2ImageList = [pygame.image.load("PowerImages/CityPic/city2NoPower"),pygame.image.load("PowerImages/CityPic/city2MedPower"),pygame.image.load("PowerImages/CityPic/city2MaxPower")]
+##cIty3ImageList = [pygame.image.load("PowerImages/CityPic/lasVegasNoPower",pygame.image.load("PowerImages/CityPic/lasVegasMedPower",pygame.image.load("PowerImages/CityPic/lasVegasMaxPower")]
+
+pygame.mixer.music.load('music/music1.mp3')
+pygame.mixer.music.play(-1)
+
+def sound():
+    effect = pygame.mixer.Sound('sounds/Coin.wav')
+    effect.play()
+
 
 
 #Levels
@@ -95,6 +103,8 @@ while True:
                 sys.exit()
             if startGame.handleEvent(event):
                 print('start game')
+                sound()
+                pygame.mixer.music.play()
                 state = LEVEL_ONE
             
 
@@ -119,6 +129,7 @@ while True:
                     if numberOfGenerators1 >= 15:
                         print("Max gen owned")
                     else:
+                        sound()
                         numberOfGenerators1 = numberOfGenerators1 + 1
                         numberOfGen1Display.setValue(numberOfGenerators1)
                         playerMoney = playerMoney - 1
@@ -130,6 +141,7 @@ while True:
                     if numberOfGenerators2 >=15:
                         print("Maxed gen owned")
                     else:
+                        sound()
                         numberOfGenerators2 = numberOfGenerators2 + 1
                         numberOfGen2Display.setValue(numberOfGenerators2)
                         
@@ -138,7 +150,8 @@ while True:
                     print("Gen3 button clicked")
                     if numberOfGenerators3 >=15:
                         print("Maxed gen owned")
-                    else: 
+                    else:
+                        sound()
                         numberOfGenerators3 = numberOfGenerators3 + 1
                         numberOfGen3Display.setValue(numberOfGenerators3)
 
