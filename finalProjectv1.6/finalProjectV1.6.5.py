@@ -76,7 +76,9 @@ playerMoney = 0
 #Random numbers
 #removeRandomAmount = random.randrange(0,10)
 
-
+#Timer
+generatorMoneyTimer = pyghelpers.CountDownTimer(5)
+generatorMoneyTimer.start()
 
 
 state = START
@@ -86,6 +88,7 @@ state = START
 while True:
 
     removeRandomAmount = random.randrange(0,10)
+    print(generatorMoneyTimer)
      
     if state == START:
         for event in pygame.event.get():
@@ -149,6 +152,8 @@ while True:
 
             totalPowerOutput = (numberOfGenerators1) + (numberOfGenerators2 * 5) + (numberOfGenerators3 * 10)
 
+            
+            '''
             if totalPowerOutput == 15:
                 playerMoney = playerMoney + 2
             elif totalPowerOutput == 25:
@@ -156,9 +161,18 @@ while True:
             elif totalPowerOutput == 30:
                 playerMoney = playerMoney + 4
 
+            '''
+            if totalPowerOutput <= 50:
+                if generatorMoneyTimer.ended():
+                    playerMoney = playerMoney + 30
+                    generatorMoneyTimer.restart()
+                    
+                    
+            
+
 #----------------------------------------------------------------------
-            if numberOfGenerators1 >= 10:
-                playerMoney = playerMoney - 1
+            #if numberOfGenerators1 >= 10:
+                #playerMoney = playerMoney - 1
             
 #----------------------------------------------------------------------
             

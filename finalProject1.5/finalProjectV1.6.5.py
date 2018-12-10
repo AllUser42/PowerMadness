@@ -32,6 +32,21 @@ clock = pygame.time.Clock()
 startMenu = pygame.image.load("menuPlaceHolderGame.jpg")
 backGroundImage = pygame.image.load("images/background.jpg")
 
+<<<<<<< HEAD
+pygame.mixer.music.load('music/music1.mp3')
+pygame.mixer.music.set_volume(.5)
+pygame.mixer.music.play(-1)
+
+def sound():
+    effect = pygame.mixer.Sound('sounds/bonus.wav')
+    effect.play()
+
+
+def sound2():
+    effect = pygame.mixer.Sound('sounds/Nextbutton.wav')
+    effect.play()
+=======
+>>>>>>> 53a1c9b280454c7396a80f57d09b95ad828a9bb0
 
 
 #Levels
