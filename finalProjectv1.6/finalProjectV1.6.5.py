@@ -31,6 +31,7 @@ clock = pygame.time.Clock()
 #Load Image
 startMenu = pygame.image.load("menuPlaceHolderGame.jpg")
 backGroundImage = pygame.image.load("images/background.jpg")
+generatorImage = pygame.image.load("images/generatorLarge.png")
 
 
 
@@ -213,6 +214,7 @@ while True:
 
             
             window.blit(backGroundImage,(0,0))
+            window.blit(generatorImage,(83,262))
             buyGenerator1.draw()
             buyGenerator2.draw()
             buyGenerator3.draw()
