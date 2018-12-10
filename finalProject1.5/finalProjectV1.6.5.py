@@ -76,6 +76,22 @@ playerMoney = 0
 #Random numbers
 #removeRandomAmount = random.randrange(0,10)
 
+pygame.mixer.music.load('music/music1.mp3')
+pygame.mixer.music.set_volume(0.5)
+pygame.mixer.music.play(-1)
+
+
+
+
+def sound():
+    effect = pygame.mixer.Sound('sounds/bonus.wav')
+    effect.play()
+
+
+def sound2():
+    effect = pygame.mixer.Sound('sounds/Nextbutton.wav')
+    effect.play()
+
 
 
 
@@ -94,6 +110,7 @@ while True:
                 sys.exit()
             if startGame.handleEvent(event):
                 print('start game')
+                sound()
                 state = LEVEL_ONE
             
 
@@ -123,7 +140,9 @@ while True:
                     print("Gen button clicked # is" , numberOfGenerators1)
                     if numberOfGenerators1 >= 15:
                         print("Max gen owned")
+                        sound2()
                     else:
+                        sound()
                         numberOfGenerators1 = numberOfGenerators1 + 1
                         numberOfGen1Display.setValue(numberOfGenerators1)
                         
@@ -132,7 +151,9 @@ while True:
                     print("Gen2 button clicked")
                     if numberOfGenerators2 >=15:
                         print("Maxed gen owned")
+                        sound2()
                     else:
+                        sound()
                         numberOfGenerators2 = numberOfGenerators2 + 1
                         numberOfGen2Display.setValue(numberOfGenerators2)
                         playerMoney = playerMoney - 50
@@ -141,8 +162,10 @@ while True:
                 if buyGenerator3.handleEvent(event):
                     print("Gen3 button clicked")
                     if numberOfGenerators3 >=15:
+                        sound2()
                         print("Maxed gen owned")
-                    else: 
+                    else:
+                        sound()
                         numberOfGenerators3 = numberOfGenerators3 + 1
                         numberOfGen3Display.setValue(numberOfGenerators3)
 
@@ -243,8 +266,10 @@ while True:
                     if buyGenerator1.handleEvent(event):
                         print("Gen button clicked # is" , numberOfGenerators1)
                         if numberOfGenerators1 >= 15:
+                            sound2()
                             print("Max gen owned")
                         else:
+                            sound()
                             numberOfGenerators1 = numberOfGenerators1 + 1
                             numberOfGen1Display.setValue(numberOfGenerators1)
                             
@@ -252,8 +277,10 @@ while True:
                     if buyGenerator2.handleEvent(event):
                         print("Gen2 button clicked")
                         if numberOfGenerators2 >=15:
+                            sound2()
                             print("Maxed gen owned")
                         else:
+                            sound()
                             numberOfGenerators2 = numberOfGenerators2 + 1
                             numberOfGen2Display.setValue(numberOfGenerators2)
                             playerMoney = playerMoney - 50
@@ -262,8 +289,10 @@ while True:
                     if buyGenerator3.handleEvent(event):
                         print("Gen3 button clicked")
                         if numberOfGenerators3 >=15:
+                            sound2()
                             print("Maxed gen owned")
-                        else: 
+                        else:
+                            sound()
                             numberOfGenerators3 = numberOfGenerators3 + 1
                             numberOfGen3Display.setValue(numberOfGenerators3)
 

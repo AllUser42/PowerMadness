@@ -38,14 +38,7 @@ pygame.mixer.music.load('music/music1.mp3')
 pygame.mixer.music.set_volume(0.5)
 pygame.mixer.music.play(-1)
 
-def sound():
-    effect = pygame.mixer.Sound('sounds/bonus.wav')
-    effect.play()
 
-
-def sound2():
-    effect = pygame.mixer.Sound('sounds/Nextbutton.wav')
-    effect.play()
 
 
 #Levels
