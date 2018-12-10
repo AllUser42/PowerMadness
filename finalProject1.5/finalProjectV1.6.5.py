@@ -35,6 +35,7 @@ city1ImageList = [pygame.image.load("PowerImages/CityPic/city1NoPower.jpg"),pyga
 ##cIty3ImageList = [pygame.image.load("PowerImages/CityPic/lasVegasNoPower",pygame.image.load("PowerImages/CityPic/lasVegasMedPower",pygame.image.load("PowerImages/CityPic/lasVegasMaxPower")]
 
 pygame.mixer.music.load('music/music1.mp3')
+pygame.mixer.music.set_volume(.5)
 pygame.mixer.music.play(-1)
 
 def sound():
